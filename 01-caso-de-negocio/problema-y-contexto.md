@@ -1,6 +1,10 @@
 # Problema y contexto
 
-**Estado: En revisión. Versión 0.1, 28/10/2026.** Caso de negocio desarrollado para H1-01. Listo para contrastar sus supuestos; no implica aceptación del MVP ni beneficios comprobados. Fuentes: [PDI vigente](../00-pdi/Objetivos_PDI_2026.md) y [contexto aportado por Óscar](../00-pdi/fuentes/contexto-transferido-2026-10-28.md). Entorno declarado, aún sin contrastar con artefactos. No representa un encargo comercial de un cliente real.
+Lectura 1 de 5 · [Índice del caso de negocio](README.md)
+
+[← Portada del repositorio](../README.md) · [Siguiente: alcance y exclusiones →](alcance-y-exclusiones.md)
+
+**Estado: En revisión. Versión 0.1, 28/10/2026.** Caso de negocio desarrollado para H1-01. Listo para contrastar sus supuestos; no implica aceptación del MVP ni beneficios comprobados. Fuentes: [PDI vigente](../00-pdi/Objetivos_PDI_2026.md) y contexto aportado por Óscar en la sesión del 28/10 (su archivo histórico ya no está disponible en el repositorio). Entorno declarado, aún sin contrastar con artefactos. No representa un encargo comercial de un cliente real.
 
 ## Resumen del caso de negocio
 
@@ -132,3 +136,7 @@ Este escenario reemplaza como hilo principal el borrador del 25/10 sobre ventas.
 Este borrador permite revisar si el problema, usuario, recorrido y evidencia propuesta justifican continuar al diseño. La recomendación está condicionada a delimitar patrones, disponibilidad de artefactos y capacidad. Los [criterios propuestos](beneficios-y-criterios-de-exito.md) permiten decidir continuar, acotar o detener la extensión sin declarar éxito por haber construido una demo.
 
 El hito de diseño sigue al 15/11/2026. Se ha desarrollado el caso documental; su aprobación, la arquitectura y el resultado del piloto son estados diferentes. Siguiente tarea: revisar los criterios propuestos y, con el parser y artefactos disponibles, concretar cobertura y estimación. No se requiere validación de un cliente real para cerrar el ejercicio del PDI.
+
+---
+
+[← Portada del repositorio](../README.md) · [Índice del caso de negocio](README.md) · [Siguiente: alcance y exclusiones →](alcance-y-exclusiones.md)

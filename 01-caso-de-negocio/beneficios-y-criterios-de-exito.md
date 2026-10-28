@@ -1,5 +1,9 @@
 # Beneficios y criterios de éxito
 
+Lectura 3 de 5 · [Índice del caso de negocio](README.md)
+
+[← Anterior: alcance y exclusiones](alcance-y-exclusiones.md) · [Siguiente: costos y esfuerzo →](costos-y-esfuerzo.md)
+
 **Estado: En revisión. Versión 0.1, 28/10/2026.** Criterios propuestos para evaluar el [caso de negocio](problema-y-contexto.md). No son métricas medidas ni umbrales aceptados. No se modifican los indicadores vacíos del Excel.
 
 | Hipótesis / criterio propuesto | Cómo comprobarlo | Meta |
@@ -50,3 +54,7 @@ No se fija un porcentaje arbitrario de ahorro. Informar diferencias absolutas po
 ## Información pendiente
 
 Tiempo y frecuencia reales de investigaciones, costo interno por hora, volumen de DAGs, variación de patrones y costo de actualización. No impiden definir el ejercicio sintético; sí limitan cualquier cálculo de retorno comercial y una promesa de precio o ahorro.
+
+---
+
+[← Anterior: alcance y exclusiones](alcance-y-exclusiones.md) · [Índice del caso de negocio](README.md) · [Siguiente: costos y esfuerzo →](costos-y-esfuerzo.md)

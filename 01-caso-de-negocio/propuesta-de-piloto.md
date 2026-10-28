@@ -1,5 +1,9 @@
 # Propuesta técnica y comercial de piloto
 
+Lectura 5 de 5 · [Índice del caso de negocio](README.md)
+
+[← Anterior: costos y esfuerzo](costos-y-esfuerzo.md) · [Continuar con arquitectura →](../02-arquitectura/README.md)
+
 **Estado: En curso. Versión 0.1, 28/10/2026.** Propuesta inicial derivada del caso de negocio. Se completará con arquitectura, esfuerzo y mediciones para H3-02; no es una oferta contractual ni un piloto vendido.
 
 ## Propuesta al patrocinador simulado
@@ -39,3 +43,7 @@ Riesgos principales: cobertura de columnas mayor que la capacidad disponible, co
 ## Próximo acuerdo
 
 Revisar la versión 0.1 del caso, delimitar patrones con ejemplos y parser, acordar criterios y estimar esfuerzo. Con esas respuestas se podrá completar el diseño; con resultados medidos se podrá convertir esta propuesta inicial en una propuesta técnica/comercial defendible.
+
+---
+
+[← Anterior: costos y esfuerzo](costos-y-esfuerzo.md) · [Índice del caso de negocio](README.md) · [Continuar con arquitectura →](../02-arquitectura/README.md)

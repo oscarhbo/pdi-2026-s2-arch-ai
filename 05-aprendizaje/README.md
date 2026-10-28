@@ -1,6 +1,6 @@
 # Aprendizaje
 
-**Estado: Pendiente.** No hay lecturas, cursos, laboratorios o certificados acreditados en este repositorio.
+**Estado: Con aprendizaje documentado.** Curso TOGAF completado según confirmación de Óscar el 28/10/2026; notas y enlace al certificado de finalización de Udemy disponibles en la ficha del curso. No se registra certificación profesional de TOGAF ni se da por completada la formación comprometida en el Excel.
 
 | Recurso previsto | Aplicación por explorar | Ubicación |
 | --- | --- | --- |
@@ -14,3 +14,7 @@
 Cada nota incluirá: Recurso, conceptos aprendidos, aplicación al proyecto y enlace a la evidencia. Agregar fecha, capítulo/módulo y estado real para delimitar lo estudiado. No copiar libros completos ni materiales de terceros. La presencia en esta lista no implica lectura ni selección de tecnología.
 
 [Aplicación al proyecto](aplicacion-al-proyecto.md) será el índice de vínculos, sin duplicar notas. Formación sin cantidad global de horas fijada; no interpretar los porcentajes 70/20/10 como horas calculadas.
+
+## Formación complementaria documentada
+
+- [TOGAF Standard, 10th Edition — notas del curso de Udemy](cursos/togaf-standard-10th-edition.md). Curso completado por confirmación del usuario. Formación complementaria; no sustituye las lecturas, módulos o laboratorios del PDI.

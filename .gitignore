@@ -45,4 +45,6 @@ client-data/
 *.wav
 *.mp3
 # fuentes
-00-pdi/fuentes/
+/00-pdi/fuentes/
+# Prompts y materiales auxiliares locales
+/00-pdi/auxiliar/

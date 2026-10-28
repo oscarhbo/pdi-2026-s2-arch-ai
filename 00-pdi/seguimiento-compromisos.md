@@ -27,6 +27,12 @@ No hay reprogramaciones aprobadas. Ninguno de los tres hitos profesionales ha ve
 
 ## Registro de cambios
 
+- 28/10/2026, constancia de formación complementaria: añadido el enlace al certificado de finalización de Udemy aportado por Óscar en la [ficha de TOGAF](../05-aprendizaje/cursos/togaf-standard-10th-edition.md). Acceso web no disponible para validación independiente. No se registra certificación profesional ni se modifican estados o fechas de los compromisos originales.
+
+- 28/10/2026, formación complementaria: documentadas las [notas de TOGAF](../05-aprendizaje/cursos/togaf-standard-10th-edition.md), curso de Udemy “Learn about the TOGAF 10.0 Standard and prepare for the certification”. Óscar confirma la finalización del curso completo; esta confirmación posterior sustituye el alcance parcial de la transferencia. No se infiere fecha de finalización ni certificación. Las aplicaciones al proyecto son propuestas; H1-05, H2-05 y H3-06 mantienen sus estados y fechas porque TOGAF no sustituye los recursos comprometidos en el Excel.
+
+- 28/10/2026, apoyo a formación: preparado prompt local excluido de Git y acordado un archivo por curso o libro en las carpetas de aprendizaje. Entrada prevista: título y contexto; las notas requieren fuentes y distinguir propuestas de resultados. H1-05, H2-05 y H3-06 conservan estado Pendiente; no hay nueva lectura, curso o aplicación acreditados.
+
 - 28/10/2026, caso de negocio: desarrollada versión 0.1 y cinco documentos de negocio. H1-01 pasa a En revisión por existir un borrador sustantivo para contrastar; H3-02 pasa a En curso por su propuesta inicial. Alcance funcional RF-01 a RF-05 y criterios CA-01 a CA-06 propuestos, no aceptados automáticamente. No se realizó revisión simulada ni evaluación del prototipo; no cambian fechas ni estados de esos entregables.
 
 - 28/10/2026, sincronización de fuente: Óscar actualizó el Excel de fuentes; se sincronizaron resumen y anexo de [objetivos](Objetivos_PDI_2026.md). Se registró la diferencia entre desarrollar el parser (PDI C11) y revisar el existente (Plan de Carrera C23), sin inferir sustitución. Fechas y estados sin cambios.

@@ -1,6 +1,10 @@
 # Alcance y exclusiones
 
-**Estado: En curso.** Refinamiento del 28/10/2026. Fuente: [contexto transferido](../00-pdi/fuentes/contexto-transferido-2026-10-28.md). El MVP definitivo sigue abierto. Los [compromisos originales](../00-pdi/Objetivos_PDI_2026.md) mantienen fechas, diez cambios y cinco comparaciones manuales.
+Lectura 2 de 5 · [Índice del caso de negocio](README.md)
+
+[← Anterior: problema y contexto](problema-y-contexto.md) · [Siguiente: beneficios y criterios →](beneficios-y-criterios-de-exito.md)
+
+**Estado: En curso.** Refinamiento del 28/10/2026. Fuente: contexto transferido por Óscar en esa sesión; su archivo histórico ya no está disponible en el repositorio. El MVP definitivo sigue abierto. Los [compromisos originales](../00-pdi/Objetivos_PDI_2026.md) mantienen fechas, diez cambios y cinco comparaciones manuales.
 
 ## Prioridades confirmadas por el usuario
 
@@ -60,3 +64,7 @@ El análisis de cambio de tipo identificará dependencias candidatas. Determinar
 ## Pendiente antes de cerrar alcance
 
 Revisar ejemplos y esquemas; fijar versión/patrones SQL, tratamiento de vistas, parámetros y condiciones; acordar criterios CA-01 a CA-06; estimar trabajo; resolver el camino del parser. El Excel vigente conserva “Revisar el parser existente” en Plan de Carrera C23 y dice “Desarrollar el parser de SQL” en PDI C11. La revisión previa sigue siendo pertinente, pero reutilización, adaptación o sustitución no se deducen de esa redacción.
+
+---
+
+[← Anterior: problema y contexto](problema-y-contexto.md) · [Índice del caso de negocio](README.md) · [Siguiente: beneficios y criterios →](beneficios-y-criterios-de-exito.md)

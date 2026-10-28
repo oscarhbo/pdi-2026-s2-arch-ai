@@ -1,5 +1,9 @@
 # Costos y esfuerzo
 
+Lectura 4 de 5 · [Índice del caso de negocio](README.md)
+
+[← Anterior: beneficios y criterios](beneficios-y-criterios-de-exito.md) · [Siguiente: propuesta de piloto →](propuesta-de-piloto.md)
+
 **Estado: En curso. Versión 0.1, 28/10/2026.** Modelo de esfuerzo y costo para revisar el caso. No es cotización ni consumo medido. No se conoce todavía la capacidad del parser ni el esfuerzo de resolver los patrones seleccionados.
 
 ## Recursos conocidos y límites
@@ -53,3 +57,7 @@ Para justificar una inversión real, añadir construcción y gastos al modelo mo
 Con cambios poco frecuentes o mucha actualización, la alternativa manual puede ser preferible. Con patrones repetidos y conocimiento estable, puede aumentar la reutilización. Más llamadas IA pueden mejorar presentación o elevar costo sin mejorar detección: medir ambas cosas por separado. Son escenarios a contrastar, no una recomendación de compra.
 
 Antes de aceptar la implementación del MVP: confirmar disponibilidad semanal restante, horas por paquete, contingencia explícita y cobertura que cabe. Si no cabe, proponer reducir patrones y automatización, conservando tablas/columnas y fechas originales hasta que se acuerde otra cosa.
+
+---
+
+[← Anterior: beneficios y criterios](beneficios-y-criterios-de-exito.md) · [Índice del caso de negocio](README.md) · [Siguiente: propuesta de piloto →](propuesta-de-piloto.md)
