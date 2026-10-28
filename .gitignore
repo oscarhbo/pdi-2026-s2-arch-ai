@@ -1,0 +1,48 @@
+# Secretos y configuración local
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+credentials*
+secrets*
+.aws/
+# Entornos y dependencias
+.venv/
+venv/
+env/
+node_modules/
+__pycache__/
+*.py[cod]
+# Cachés y resultados temporales
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+coverage/
+htmlcov/
+.coverage
+build/
+dist/
+tmp/
+temp/
+*.tmp
+*.log
+~$*
+.DS_Store
+Thumbs.db
+# Datos reales: no introducirlos en otras rutas
+datos-reales/
+client-data/
+# Multimedia grande: registrar enlaces externos
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.wav
+*.mp3
+# fuentes
+00-pdi/fuentes/
