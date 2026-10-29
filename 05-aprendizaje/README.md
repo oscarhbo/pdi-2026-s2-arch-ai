@@ -1,11 +1,11 @@
 # Aprendizaje
 
-**Estado: Con aprendizaje documentado.** Curso TOGAF completado según confirmación de Óscar el 28/10/2026; notas y enlace al certificado de finalización de Udemy disponibles en la ficha del curso. No se registra certificación profesional de TOGAF ni se da por completada la formación comprometida en el Excel.
+**Estado: Con aprendizaje documentado.** A Philosophy of Software Design cuenta con notas consolidadas de 22 temas a partir de la transferencia de estudio. Curso TOGAF completado según confirmación de Óscar el 28/10/2026; notas y enlace al certificado de finalización de Udemy disponibles en la ficha del curso. No se registra certificación profesional de TOGAF ni se da por completada la formación comprometida en el Excel.
 
 | Recurso previsto | Aplicación por explorar | Ubicación |
 | --- | --- | --- |
 | AI Engineering | Evaluación y contexto. | [Libros](libros/README.md) |
-| A Philosophy of Software Design | Modularidad e interfaces del analizador. | [Libros](libros/README.md) |
+| A Philosophy of Software Design | Modularidad e interfaces del analizador; aplicaciones propuestas. | [Notas de estudio](libros/a-philosophy-of-software-design.md) |
 | Architecting AI Sotfware Systems (literal del PDI) | Por precisar; autor y edición pendientes. | [Libros](libros/README.md) |
 | Agentic Track, Udemy | Seleccionar módulos de herramientas y evaluación; instructor y enlace pendientes. | [Cursos](cursos/README.md) |
 | Production-Ready AI, Google | Seleccionar labs de agentes, seguridad y observabilidad. | [Laboratorios](laboratorios/README.md) |

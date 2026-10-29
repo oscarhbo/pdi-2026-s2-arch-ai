@@ -1,6 +1,6 @@
 # Seguimiento de compromisos
 
-Última actualización: 28/10/2026. Responsable: Óscar Hernández Barrón. Fuente: [Excel y aclaraciones](fuentes/README.md), hoja Mi PDI Semestre 2 2026 salvo indicación. No se asignan porcentajes a partir de celdas vacías.
+Última actualización: 29/10/2026. Responsable: Óscar Hernández Barrón. Fuente: [Excel y aclaraciones](fuentes/README.md), hoja Mi PDI Semestre 2 2026 salvo indicación. No se asignan porcentajes a partir de celdas vacías.
 
 Estados permitidos: Pendiente, En curso, Bloqueado, En revisión y Completado. Completado requiere entregable y evidencia verificable; En revisión supone un entregable preparado para contrastar; Bloqueado exige impedimento concreto. Los enlaces de plantilla son destinos previstos, no evidencia de cumplimiento.
 
@@ -10,7 +10,7 @@ Estados permitidos: Pendiente, En curso, Bloqueado, En revisión y Completado. C
 | H1-02 | 1 | Diseño de arquitectura | 15/11/2026 | — | En curso | [Trabajo parcial](../02-arquitectura/arquitectura-de-solucion.md) | Flujos conceptuales y preguntas documentados; sin diseño aprobado. Prioridad de alcance en ADR-001. E8. |
 | H1-03 | 1 | Plan de ejecución | 15/11/2026 | — | En curso | [Trabajo parcial](plan-de-trabajo.md) | Plan inicial propuesto; falta estimar y validar capacidad. E8. |
 | H1-04 | 1 | Revisión simulada y decisiones sobre observaciones | 15/11/2026 | — | Pendiente | [Destino; sin evidencia](../02-arquitectura/decisiones/README.md) | Sin revisión realizada. C9/E9. |
-| H1-05 | 1 | Notas de lectura aplicadas al diseño | 15/11/2026 | — | Pendiente | [Destino; sin evidencia](../05-aprendizaje/aplicacion-al-proyecto.md) | Sin lectura o aplicación acreditada. E10. |
+| H1-05 | 1 | Notas de lectura aplicadas al diseño | 15/11/2026 | — | En curso | [Notas de A Philosophy of Software Design](../05-aprendizaje/libros/a-philosophy-of-software-design.md) y [vínculos de aplicación](../05-aprendizaje/aplicacion-al-proyecto.md) | Recorrido de 22 temas consolidado desde la transferencia de estudio. Aplicaciones al analizador propuestas, sin decisiones aceptadas ni resultados verificados; no completa las demás lecturas. E10. |
 | H2-01 | 2 | Prototipo ejecutable | 20/12/2026 | — | Pendiente | [Destino; sin evidencia](../03-solucion/README.md) | Sin implementación. C11/E11. |
 | H2-02 | 2 | Reporte de evaluación de diez cambios | 20/12/2026 | — | Pendiente | [Destino; sin evidencia](../04-evaluacion/resultados/README.md) | Sin ejecuciones; protocolo propuesto. C11/E11. |
 | H2-03 | 2 | Registro de cumplimiento de compromisos | 20/12/2026 | — | En curso | [Trabajo parcial](seguimiento-compromisos.md) | Registro iniciado; seguimiento continuo y cierre pendientes. C11/E11. |
@@ -26,6 +26,10 @@ Estados permitidos: Pendiente, En curso, Bloqueado, En revisión y Completado. C
 No hay reprogramaciones aprobadas. Ninguno de los tres hitos profesionales ha vencido al 28/10/2026. La fecha personal de 2025 se conserva y se trata aparte en [aclaraciones](fuentes/README.md).
 
 ## Registro de cambios
+
+- 29/10/2026, aplicación del aprendizaje: revisadas las notas de A Philosophy of Software Design y documentadas [tres aplicaciones concretas](../05-aprendizaje/aplicacion-al-proyecto.md#aplicaciones-software-design): contrato del análisis, actualización por DAG y separación de resultados/explicación IA. Incluyen trade-offs y validaciones previstas. Continúan como propuestas; H1-05 permanece En curso, sin decisiones aceptadas, pruebas ejecutadas ni cambios en fechas.
+
+- 28/10/2026, notas de lectura: consolidado [A Philosophy of Software Design](../05-aprendizaje/libros/a-philosophy-of-software-design.md) en un único archivo con 22 temas, ejemplos y repaso rápido. H1-05 pasa a En curso por existir notas sustantivas de un libro comprometido; aplicaciones al diseño propuestas, sin implementación ni decisiones aceptadas. La transferencia no especifica edición ni fecha de finalización de lectura. Fechas originales conservadas; H2-05 y H3-06 sin cambios.
 
 - 28/10/2026, constancia de formación complementaria: añadido el enlace al certificado de finalización de Udemy aportado por Óscar en la [ficha de TOGAF](../05-aprendizaje/cursos/togaf-standard-10th-edition.md). Acceso web no disponible para validación independiente. No se registra certificación profesional ni se modifican estados o fechas de los compromisos originales.
 

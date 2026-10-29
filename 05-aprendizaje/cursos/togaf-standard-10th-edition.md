@@ -7,7 +7,7 @@
 **Documentación:** 28/10/2026.  
 **Enfoque:** manual personal de conceptos esenciales y criterios de aplicación profesional. La organización es temática; no reproduce el índice de lecciones de Udemy. 
 
-## Resumen ejecutivo
+## Resumen General
 
 La arquitectura empresarial conecta los objetivos de una organización con sus capacidades, procesos, información, aplicaciones y tecnología. Su utilidad está en hacer coherentes las decisiones y orientar la transformación: comprender dónde estamos, definir hacia dónde queremos avanzar y organizar cambios viables.
 

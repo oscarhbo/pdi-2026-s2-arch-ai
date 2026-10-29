@@ -1,8 +1,12 @@
 # Estado actual
 
-Última actualización: **28/10/2026**, zona America/Mexico_City. Sesión más reciente: incorporación del certificado de finalización de Udemy a la ficha de TOGAF.
+Última actualización: **29/10/2026**, zona America/Mexico_City. Sesión más reciente: revisión y selección de tres aplicaciones de A Philosophy of Software Design.
 
 ## Avance comprobado
+
+- 29/10/2026: revisada la coherencia de las notas del libro con el alcance y la arquitectura conceptual. Documentadas [APSD-01 a APSD-03](../05-aprendizaje/aplicacion-al-proyecto.md#aplicaciones-software-design), con ejemplos sintéticos, trade-offs y validaciones previstas. Son propuestas; no se inspeccionó el parser ni se ejecutaron pruebas. Las anotaciones del usuario en el libro se conservaron.
+
+- 28/10/2026: consolidadas las [notas de A Philosophy of Software Design](../05-aprendizaje/libros/a-philosophy-of-software-design.md) en un único archivo con 22 temas, resumen, ejemplos, criterios de revisión y glosario. Fuente: transferencia de estudio aportada; primeros tres temas reconstruidos temáticamente en esa fuente. H1-05 pasa a En curso. Las aplicaciones a linaje son propuestas, no decisiones aceptadas ni resultados.
 
 - 28/10/2026: incorporado a la [ficha de TOGAF](../05-aprendizaje/cursos/togaf-standard-10th-edition.md) el enlace al certificado de finalización de Udemy aportado por Óscar. Se conserva una única ubicación para el enlace externo. La herramienta web no pudo abrirlo; no se atribuyen datos adicionales del certificado ni validación independiente. No equivale a certificación profesional de TOGAF.
 
@@ -33,7 +37,7 @@ Caso: DAG 1 lee raw.ventas/raw.clientes y produce curated.ventas, con posibles S
 
 ## Trabajo en curso
 
-Caso v0.1 En revisión; alcance funcional, costos, propuesta de piloto, planificación y arquitectura conceptual En curso. [Entregables](seguimiento-compromisos.md). Tablas y columnas ya son prioridad confirmada; versión y patrones Spark SQL siguen abiertos. TOGAF está documentado y su finalización fue confirmada por Óscar. No hay pruebas, métricas, lecturas, grabaciones o revisiones simuladas acreditadas, ni constancias de los cursos comprometidos en el Excel. Los criterios propuestos son parte del borrador, no acuerdos ni resultados.
+Caso v0.1 En revisión; alcance funcional, costos, propuesta de piloto, planificación y arquitectura conceptual En curso. [Entregables](seguimiento-compromisos.md). Tablas y columnas ya son prioridad confirmada; versión y patrones Spark SQL siguen abiertos. TOGAF está documentado y su finalización fue confirmada por Óscar. A Philosophy of Software Design dispone de notas del recorrido de estudio aportado; H1-05 está En curso. No hay pruebas, métricas, grabaciones o revisiones simuladas acreditadas, ni constancias de los cursos comprometidos en el Excel. Los criterios propuestos son parte del borrador, no acuerdos ni resultados.
 
 ## Decisiones pendientes
 
@@ -46,6 +50,8 @@ El flujo conceptual, catálogo persistente, separación análisis/IA y arranque 
 Faltan código/ruta del parser y ejemplos representativos de DAG, configuración y YAML. Esto impide verificar reutilización y convenciones, pero permite continuar la delimitación funcional. No reemplazar el parser ni inventar estructura del framework. No hay dependencia de revisión humana externa para cerrar el proyecto. Fechas ambiguas del Excel y referencia bibliográfica siguen en [fuentes](fuentes/README.md).
 
 ## Próxima acción concreta
+
+Para aplicar las notas del libro, desarrollar el contrato candidato APSD-01 con un DAG sintético: entradas, salidas, evidencia, cobertura y errores. Después contrastarlo con las capacidades reales del parser y comparar las alternativas de APSD-02. Registrar aceptación explícita antes de convertir propuestas en decisiones.
 
 Para aprovechar el aprendizaje documentado, contrastar las propuestas de aplicación de TOGAF con el caso de negocio y registrar únicamente las decisiones expresamente aceptadas. La documentación del curso queda terminada.
 
@@ -70,3 +76,13 @@ La revisión propuesta del Excel se guardó por separado y posteriormente Óscar
 Notas consolidadas en un único archivo y enlazadas desde aprendizaje, cursos y aplicación al proyecto. La base fue la transferencia aportada, con la confirmación posterior de curso completo. La sección de gobierno se desarrolló como síntesis conceptual complementaria; no se inspeccionaron lecciones privadas de Udemy. Se contrastó la estructura general con información pública oficial; el acceso al texto completo del estándar requirió autenticación y no permitió una verificación exhaustiva. Por instrucción del usuario, las notas no incluyen referencias web. No se modificaron objetivos ni compromisos, ni se realizaron commits o publicaciones.
 
 Verificación de esta sesión: los enlaces nuevos y las anclas internas de las notas resuelven; el documento no contiene enlaces web ni estados pendientes. Las 16 filas de compromisos se conservaron sin cambios, al igual que AGENTS.md, .gitignore, objetivos, prompt base y transferencia. Se detectó un enlace histórico ya existente cuyo destino no está disponible: `fuentes/revision-excel-2026-10-28.md` en el seguimiento; no se alteró ese registro.
+
+### Cierre de notas de A Philosophy of Software Design — 28/10/2026
+
+Conservada la transferencia original y elaborado un documento de consulta con voz de apuntes personales. Los ejemplos de seguros, datos e IA se distinguen de las ideas atribuidas al libro; el código es ilustrativo, no ejecutado ni verificado como API de un proveedor. No se infiere edición ni fecha de finalización. Índices de libros, aprendizaje y aplicación actualizados. H1-05 refleja avance documental parcial, sin completar el conjunto de lecturas o acreditar aplicación. Sin cambios a objetivos, fechas, commits o publicaciones.
+
+Verificación documental del libro: 22 temas, 27 enlaces internos válidos, tablas y bloques de código sin inconsistencias estructurales. Comprobados los 7 enlaces nuevos al libro desde índices y registros. Únicamente H1-05 cambió en la tabla de compromisos; fechas conservadas. Fuente, prompt, AGENTS.md, .gitignore y objetivos permanecen sin cambios.
+
+### Verificación de aplicaciones del libro — 29/10/2026
+
+Comprobados 16 enlaces relativos e internos del registro de aplicaciones, sin destinos faltantes. Tres propuestas documentadas. Las notas del libro permanecen idénticas al inicio de esta revisión, incluidas las anotaciones del usuario. Las 16 filas de compromisos no cambiaron. La revisión comprueba coherencia documental y pertinencia al proyecto; no certifica fidelidad íntegra a una edición del libro ni ejecución técnica. Sin commits ni publicaciones.
