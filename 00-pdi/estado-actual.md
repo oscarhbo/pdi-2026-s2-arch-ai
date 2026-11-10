@@ -1,8 +1,10 @@
 # Estado actual
 
-Última actualización: **29/10/2026**, zona America/Mexico_City. Sesión más reciente: revisión y selección de tres aplicaciones de A Philosophy of Software Design.
+Última actualización: **06/11/2026**, zona America/Mexico_City. Sesión más reciente: preparación de revisión simulada del diseño del hito 1.
 
 ## Avance comprobado
+
+- 06/11/2026: preparada la [revisión simulada del hito 1](../02-arquitectura/decisiones/revision-simulada-hito-1.md), con 16 preguntas de la sesión simulada entre la IA y Óscar.
 
 - 29/10/2026: revisada la coherencia de las notas del libro con el alcance y la arquitectura conceptual. Documentadas [APSD-01 a APSD-03](../05-aprendizaje/aplicacion-al-proyecto.md#aplicaciones-software-design), con ejemplos sintéticos, trade-offs y validaciones previstas. Son propuestas; no se inspeccionó el parser ni se ejecutaron pruebas. Las anotaciones del usuario en el libro se conservaron.
 
@@ -37,7 +39,7 @@ Caso: DAG 1 lee raw.ventas/raw.clientes y produce curated.ventas, con posibles S
 
 ## Trabajo en curso
 
-Caso v0.1 En revisión; alcance funcional, costos, propuesta de piloto, planificación y arquitectura conceptual En curso. [Entregables](seguimiento-compromisos.md). Tablas y columnas ya son prioridad confirmada; versión y patrones Spark SQL siguen abiertos. TOGAF está documentado y su finalización fue confirmada por Óscar. A Philosophy of Software Design dispone de notas del recorrido de estudio aportado; H1-05 está En curso. No hay pruebas, métricas, grabaciones o revisiones simuladas acreditadas, ni constancias de los cursos comprometidos en el Excel. Los criterios propuestos son parte del borrador, no acuerdos ni resultados.
+Caso v0.1 En revisión; alcance funcional, costos, propuesta de piloto, planificación y arquitectura conceptual En curso. [Entregables](seguimiento-compromisos.md). Tablas y columnas ya son prioridad confirmada; versión y patrones Spark SQL siguen abiertos. TOGAF está documentado y su finalización fue confirmada por Óscar. A Philosophy of Software Design dispone de notas del recorrido de estudio aportado; H1-05 está En curso. No hay pruebas, métricas ni grabaciones acreditadas, ni constancias de los cursos comprometidos en el Excel. Hay una simulación de una conversación entre la IA y Óscar para revisión de dudas del caso de negocio, pendiente de decisiones definitivas.  Los criterios propuestos son parte del borrador, no acuerdos ni resultados.
 
 ## Decisiones pendientes
 
@@ -51,11 +53,13 @@ Faltan código/ruta del parser y ejemplos representativos de DAG, configuración
 
 ## Próxima acción concreta
 
+Revisar y adaptar las respuestas RS-08 a RS-13 y registrar las decisiones de la [simulación H1-04](../02-arquitectura/decisiones/revision-simulada-hito-1.md). Después incorporar al diseño los contratos y la política de actualización/evidencia elegidos, enlazar los ajustes y completar los contrastes técnicos pertinentes. Las recomendaciones continúan como propuestas.
+
 Para aplicar las notas del libro, desarrollar el contrato candidato APSD-01 con un DAG sintético: entradas, salidas, evidencia, cobertura y errores. Después contrastarlo con las capacidades reales del parser y comparar las alternativas de APSD-02. Registrar aceptación explícita antes de convertir propuestas en decisiones.
 
 Para aprovechar el aprendizaje documentado, contrastar las propuestas de aplicación de TOGAF con el caso de negocio y registrar únicamente las decisiones expresamente aceptadas. La documentación del curso queda terminada.
 
-Contrastar el caso v0.1 y revisar RF-01 a RF-05 y CA-01 a CA-06: utilidad del reporte, evidencia y límites necesarios. Después, con parser y artefactos representativos, fijar patrones Spark SQL/vistas/STG, estimar esfuerzo y resolver reutilización/adaptación/desarrollo. Conservar tablas y columnas; controlar complejidad acotando patrones. Registrar qué criterios se aceptan o ajustan antes de cerrar el alcance. La revisión simulada del hito sigue pendiente; no se ha realizado por el mero hecho de redactar este caso.
+Contrastar el caso v0.1 y revisar RF-01 a RF-05 y CA-01 a CA-06: utilidad del reporte, evidencia y límites necesarios. Después, con parser y artefactos representativos, fijar patrones Spark SQL/vistas/STG, estimar esfuerzo y resolver reutilización/adaptación/desarrollo. Conservar tablas y columnas; controlar complejidad acotando patrones. Registrar qué criterios se aceptan o ajustan antes de cerrar el alcance. La revisión simulada del hito dispone ahora de un borrador completo independiente del caso; faltan decisiones definitivas y ajustes sustentados para cerrarla.
 
 ## Verificación documental previa
 
@@ -86,3 +90,5 @@ Verificación documental del libro: 22 temas, 27 enlaces internos válidos, tabl
 ### Verificación de aplicaciones del libro — 29/10/2026
 
 Comprobados 16 enlaces relativos e internos del registro de aplicaciones, sin destinos faltantes. Tres propuestas documentadas. Las notas del libro permanecen idénticas al inicio de esta revisión, incluidas las anotaciones del usuario. Las 16 filas de compromisos no cambiaron. La revisión comprueba coherencia documental y pertinencia al proyecto; no certifica fidelidad íntegra a una edición del libro ni ejecución técnica. Sin commits ni publicaciones.
+
+
