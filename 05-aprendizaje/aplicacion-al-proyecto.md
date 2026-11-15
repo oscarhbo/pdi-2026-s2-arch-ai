@@ -4,6 +4,7 @@ Propósito: relacionar el aprendizaje con decisiones, cambios y pruebas. Mantene
 
 | Recurso / nota | Concepto aprendido | Aplicación al proyecto | Enlace a evidencia | Estado |
 | --- | --- | --- | --- | --- |
+| [AI Engineering](libros/ai-engineering.md) | Evaluación por componentes y tarea, contexto con evidencia y feedback validado. | [AIE-01 a AIE-03: evaluación, contexto y regresión](libros/ai-engineering.md#aplicacion). | [Transferencia de estudio](../00-pdi/fuentes/Context_Transfer/ai_engineering_contexto_completo_codex.md) y notas consolidadas el 10/11/2026; sin pruebas ni decisiones aceptadas. | Estudio documentado; aplicación propuesta. |
 | [A Philosophy of Software Design](libros/a-philosophy-of-software-design.md) | Módulos profundos, ocultamiento de información, contratos y diseño estratégico. | [Tres aplicaciones propuestas](#aplicaciones-software-design). | Notas de estudio disponibles; sin decisión aceptada ni implementación verificada de estas propuestas. | Estudio documentado; aplicación propuesta. |
 | [TOGAF Standard, 10th Edition](cursos/togaf-standard-10th-edition.md) | Baseline/Target, brechas, requisitos y gobierno. | [Propuestas para el analizador de linaje](cursos/togaf-standard-10th-edition.md#aplicacion). | Sin implementación ni resultado verificado. | Propuesta de aplicación; curso completado según confirmación del usuario. |
 

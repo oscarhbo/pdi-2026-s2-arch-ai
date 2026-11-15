@@ -1,8 +1,10 @@
 # Estado actual
 
-Última actualización: **06/11/2026**, zona America/Mexico_City. Sesión más reciente: preparación de revisión simulada del diseño del hito 1.
+Última actualización: **10/11/2026**, zona America/Mexico_City. Sesión más reciente: consolidación de notas de AI Engineering.
 
 ## Avance comprobado
+
+- 10/11/2026: documentado [AI Engineering](../05-aprendizaje/libros/ai-engineering.md) en un único archivo desde la transferencia de estudio: diez temas, ejemplos, preguntas, guía de decisiones, glosario y caso de linaje. Aplicaciones AIE-01 a AIE-03 propuestas, enlazadas desde aprendizaje. H1-05 conserva estado En curso; no se acreditan lectura íntegra, evaluación aprobada ni implementación por generar las notas.
 
 - 06/11/2026: preparada la [revisión simulada del hito 1](../02-arquitectura/decisiones/revision-simulada-hito-1.md), con 16 preguntas de la sesión simulada entre la IA y Óscar.
 
@@ -53,6 +55,8 @@ Faltan código/ruta del parser y ejemplos representativos de DAG, configuración
 
 ## Próxima acción concreta
 
+Para aplicar AI Engineering, concretar AIE-01: preparar un caso sintético con relaciones esperadas de tablas, columnas y condiciones y una rúbrica para evaluar la explicación por separado. Después definir el contexto mínimo con evidencia y límites de AIE-02, aprovechando los contratos propuestos en APSD-01 y APSD-03. Registrar aceptación antes de trasladar estas propuestas al diseño como decisiones.
+
 Revisar y adaptar las respuestas RS-08 a RS-13 y registrar las decisiones de la [simulación H1-04](../02-arquitectura/decisiones/revision-simulada-hito-1.md). Después incorporar al diseño los contratos y la política de actualización/evidencia elegidos, enlazar los ajustes y completar los contrastes técnicos pertinentes. Las recomendaciones continúan como propuestas.
 
 Para aplicar las notas del libro, desarrollar el contrato candidato APSD-01 con un DAG sintético: entradas, salidas, evidencia, cobertura y errores. Después contrastarlo con las capacidades reales del parser y comparar las alternativas de APSD-02. Registrar aceptación explícita antes de convertir propuestas en decisiones.
@@ -90,5 +94,11 @@ Verificación documental del libro: 22 temas, 27 enlaces internos válidos, tabl
 ### Verificación de aplicaciones del libro — 29/10/2026
 
 Comprobados 16 enlaces relativos e internos del registro de aplicaciones, sin destinos faltantes. Tres propuestas documentadas. Las notas del libro permanecen idénticas al inicio de esta revisión, incluidas las anotaciones del usuario. Las 16 filas de compromisos no cambiaron. La revisión comprueba coherencia documental y pertinencia al proyecto; no certifica fidelidad íntegra a una edición del libro ni ejecución técnica. Sin commits ni publicaciones.
+
+### Cierre de notas de AI Engineering — 10/11/2026
+
+Notas consolidadas en una única ubicación y enlazadas desde libros, aprendizaje, aplicación y seguimiento. La fuente principal es la transferencia de diez días; se distingue la ruta de estudio del índice oficial no contrastado, y los ejemplos y propuestas de resultados comprobados. H1-05 amplía su evidencia sin cambiar de estado; no se modifican objetivos ni fechas. Próxima acción: preparar el caso y la rúbrica de AIE-01 y contrastar el contexto de AIE-02 con el contrato del análisis. Sin commits, publicaciones ni gastos.
+
+Verificación documental: diez temas y 33 enlaces de las notas y sus nuevas referencias comprobados, sin destinos faltantes; tablas sin inconsistencias de columnas y ejemplos aritméticos revisados. Los 16 compromisos conservan estado y fechas; solo se amplía la evidencia de H1-05. Fuente, prompt base, AGENTS.md, objetivos, notas de A Philosophy of Software Design y revisión simulada permanecen idénticos a su contenido al inicio de esta sesión. No se ejecutaron pruebas del prototipo ni se certificó fidelidad literal al libro original.
 
 

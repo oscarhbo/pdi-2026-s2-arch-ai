@@ -1,6 +1,6 @@
 # Revisión simulada del diseño — Hito 1
 
-**Fecha:** 06/11/2026 · **Versión:** 0.1 · **Compromiso:** H1-04 · **Estado:** En progreso de revisión.
+**Fecha:** 06/11/2026 · **Versión:** 0.1 · **Compromiso:** H1-04 · **Estado:** Finalizada.
 
 ## 1. Propósito y cómo usar este documento
 

@@ -1,6 +1,6 @@
 # Seguimiento de compromisos
 
-Última actualización: 06/11/2026. Responsable: Óscar Hernández Barrón. Fuente: [Excel y aclaraciones](fuentes/README.md), hoja Mi PDI Semestre 2 2026 salvo indicación. No se asignan porcentajes a partir de celdas vacías.
+Última actualización: 10/11/2026. Responsable: Óscar Hernández Barrón. Fuente: [Excel y aclaraciones](fuentes/README.md), hoja Mi PDI Semestre 2 2026 salvo indicación. No se asignan porcentajes a partir de celdas vacías.
 
 Estados permitidos: Pendiente, En curso, Bloqueado, En revisión y Completado. Completado requiere entregable y evidencia verificable; En revisión supone un entregable preparado para contrastar; Bloqueado exige impedimento concreto. Los enlaces de plantilla son destinos previstos, no evidencia de cumplimiento.
 
@@ -10,7 +10,7 @@ Estados permitidos: Pendiente, En curso, Bloqueado, En revisión y Completado. C
 | H1-02 | 1 | Diseño de arquitectura | 15/11/2026 | — | En curso | [Trabajo parcial](../02-arquitectura/arquitectura-de-solucion.md) | Flujos conceptuales y preguntas documentados; sin diseño aprobado. Prioridad de alcance en ADR-001. E8. |
 | H1-03 | 1 | Plan de ejecución | 15/11/2026 | — | En curso | [Trabajo parcial](plan-de-trabajo.md) | Plan inicial propuesto; falta estimar y validar capacidad. E8. |
 | H1-04 | 1 | Revisión simulada y decisiones sobre observaciones | 15/11/2026 | — | En revisión | [Simulación completa v0.1](../02-arquitectura/decisiones/revision-simulada-hito-1.md) | Preguntas, respuestas propuestas por IA, contraste documental local y recomendaciones preparados. Pendientes decisiones de Óscar, ajustes y contraste técnico específico; sin pruebas ejecutadas. C9/E9. |
-| H1-05 | 1 | Notas de lectura aplicadas al diseño | 15/11/2026 | — | En curso | [Notas de A Philosophy of Software Design](../05-aprendizaje/libros/a-philosophy-of-software-design.md) y [vínculos de aplicación](../05-aprendizaje/aplicacion-al-proyecto.md) | Recorrido de 22 temas consolidado desde la transferencia de estudio. Aplicaciones al analizador propuestas, sin decisiones aceptadas ni resultados verificados; no completa las demás lecturas. E10. |
+| H1-05 | 1 | Notas de lectura aplicadas al diseño | 15/11/2026 | — | En curso | [A Philosophy of Software Design](../05-aprendizaje/libros/a-philosophy-of-software-design.md), [AI Engineering](../05-aprendizaje/libros/ai-engineering.md) y [vínculos de aplicación](../05-aprendizaje/aplicacion-al-proyecto.md) | Notas consolidadas desde transferencias: 22 temas de diseño de software y diez temas de AI Engineering. Aplicaciones al analizador propuestas, sin decisiones aceptadas ni resultados verificados; no completa las demás lecturas ni acredita aplicación. E10. |
 | H2-01 | 2 | Prototipo ejecutable | 20/12/2026 | — | Pendiente | [Destino; sin evidencia](../03-solucion/README.md) | Sin implementación. C11/E11. |
 | H2-02 | 2 | Reporte de evaluación de diez cambios | 20/12/2026 | — | Pendiente | [Destino; sin evidencia](../04-evaluacion/resultados/README.md) | Sin ejecuciones; protocolo propuesto. C11/E11. |
 | H2-03 | 2 | Registro de cumplimiento de compromisos | 20/12/2026 | — | En curso | [Trabajo parcial](seguimiento-compromisos.md) | Registro iniciado; seguimiento continuo y cierre pendientes. C11/E11. |
@@ -26,6 +26,8 @@ Estados permitidos: Pendiente, En curso, Bloqueado, En revisión y Completado. C
 No hay reprogramaciones aprobadas. Ninguno de los tres hitos profesionales ha vencido al 28/10/2026. La fecha personal de 2025 se conserva y se trata aparte en [aclaraciones](fuentes/README.md).
 
 ## Registro de cambios
+
+- 10/11/2026, notas de AI Engineering: consolidada la [ruta de diez temas](../05-aprendizaje/libros/ai-engineering.md) en un único archivo conforme al prompt base. Incluye evaluación, contexto, datos, adaptación, inferencia, operación, guía de decisiones y propuestas de aplicación. Transferencia conservada; no se consultó el libro original ni se infiere fecha de finalización. H1-05 permanece En curso y amplía su evidencia documental; H2-05 y demás estados y fechas no cambian. Sin implementación, pruebas del prototipo ni decisiones nuevas aceptadas.
 
 - 06/11/2026, revisión simulada de diseño: preparado el [registro H1-04](../02-arquitectura/decisiones/revision-simulada-hito-1.md) con 16 preguntas de la conversación simulada entre la IA como cliente y Óscar, réplicas, contraste con documentos locales y 12 recomendaciones. H1-04 pasa a En revisión. Pendientes decisiones definitivas y ajustes derivados. Fechas y demás estados conservados.
 

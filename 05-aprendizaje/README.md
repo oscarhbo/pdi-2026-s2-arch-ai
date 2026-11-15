@@ -4,7 +4,7 @@
 
 | Recurso previsto | Aplicación por explorar | Ubicación |
 | --- | --- | --- |
-| AI Engineering | Evaluación y contexto. | [Libros](libros/README.md) |
+| AI Engineering | Evaluación y contexto; diez temas documentados desde la transferencia, con aplicaciones propuestas. | [Notas de estudio](libros/ai-engineering.md) |
 | A Philosophy of Software Design | Modularidad e interfaces del analizador; aplicaciones propuestas. | [Notas de estudio](libros/a-philosophy-of-software-design.md) |
 | Architecting AI Sotfware Systems (literal del PDI) | Por precisar; autor y edición pendientes. | [Libros](libros/README.md) |
 | Agentic Track, Udemy | Seleccionar módulos de herramientas y evaluación; instructor y enlace pendientes. | [Cursos](cursos/README.md) |
@@ -12,6 +12,8 @@
 | Documenting Software Architectures: Views and Beyond | Documentar y comunicar arquitectura; edición pendiente. | [Libros](libros/README.md) |
 
 Cada nota incluirá: Recurso, conceptos aprendidos, aplicación al proyecto y enlace a la evidencia. Agregar fecha, capítulo/módulo y estado real para delimitar lo estudiado. No copiar libros completos ni materiales de terceros. La presencia en esta lista no implica lectura ni selección de tecnología.
+
+El 10/11/2026 se consolidaron las notas de AI Engineering desde la ruta de diez días aportada. La documentación queda disponible en un solo archivo; no se infiere lectura íntegra, fecha de finalización ni aplicación implementada. H1-05 conserva su estado En curso.
 
 [Aplicación al proyecto](aplicacion-al-proyecto.md) será el índice de vínculos, sin duplicar notas. Formación sin cantidad global de horas fijada; no interpretar los porcentajes 70/20/10 como horas calculadas.
 
