@@ -4,44 +4,42 @@ Lectura 1 de 5 · [Índice del caso de negocio](README.md)
 
 [← Portada del repositorio](../README.md) · [Siguiente: alcance y exclusiones →](alcance-y-exclusiones.md)
 
-**Estado: En revisión. Versión 0.1, 28/10/2026.** Caso de negocio desarrollado para H1-01. Listo para contrastar sus supuestos; no implica aceptación del MVP ni beneficios comprobados. Fuentes: [PDI vigente](../00-pdi/Objetivos_PDI_2026.md) y contexto aportado por Óscar en la sesión del 28/10 (su archivo histórico ya no está disponible en el repositorio). Entorno declarado, aún sin contrastar con artefactos. No representa un encargo comercial de un cliente real.
+**Estado: Completado para H1-01. Versión 1.0, 15/11/2026.** Caso de negocio con usuarios, problema, valor, alcance funcional y entrega del MVP definidos. Referencia: [PDI vigente](../00-pdi/Objetivos_PDI_2026.md). Los beneficios se comprobarán durante la evaluación; el cierre documental no acredita implementación ni resultados comerciales.
 
 ## Resumen del caso de negocio
 
-Proponemos evaluar una herramienta que transforme los artefactos de los pipelines en conocimiento trazable sobre sus dependencias. Un ingeniero podrá investigar el origen de un dato y consultar qué procesos o columnas requieren revisión ante un cambio, con referencias al código que sustenta la respuesta.
+El proyecto transforma los artefactos de los pipelines en conocimiento trazable sobre sus dependencias. Ingenieros y analistas podrán consultar el origen y los consumidores de tablas y columnas, explorar caminos upstream y downstream y orientar investigaciones o cambios con referencias al código.
 
 La oportunidad es reutilizar el conocimiento obtenido al analizar cada DAG, en vez de reconstruirlo en cada investigación. El valor depende de que ese conocimiento pueda mantenerse vigente y de que la herramienta declare sus límites. Una lista rápida pero incompleta, obsoleta o sin evidencia puede aumentar el riesgo de una decisión equivocada.
 
-La recomendación de este borrador es avanzar con una demostración acotada, individual y sintética que permita comprobar utilidad y costo de mantenimiento. La decisión que buscamos sustentar es si merece la pena extenderla a un piloto posterior; no justificar todavía una plataforma empresarial de gobierno ni aprobar cambios productivos.
+La decisión es construir un MVP acotado con artefactos sintéticos y un reporte como entrega suficiente. La interfaz web con visualización y descarga del reporte es una ampliación opcional si hay tiempo, sin condicionar el MVP. La evaluación posterior determinará si merece la pena extender la solución a un piloto.
 
 El documento se complementa con [alcance funcional](alcance-y-exclusiones.md), [beneficios y criterios de decisión](beneficios-y-criterios-de-exito.md), [esfuerzo y costo](costos-y-esfuerzo.md) y [propuesta inicial de piloto](propuesta-de-piloto.md). Cada uno mantiene un contenido distinto para evitar duplicar acuerdos.
 
 ## Problema principal y usuario
 
-Un ingeniero de datos necesita descubrir de dónde proceden tablas y columnas, qué procesos las generan y quién las consume. Trabaja en un entorno con múltiples pipelines mantenidos por equipos distribuidos, por ejemplo entre México e India, donde el conocimiento de dependencias está disperso entre desarrolladores, DAGs y configuraciones.
+En una plataforma con numerosos procesos, nuevas tablas y DAGs se acumulan sin una visión accesible de quién produce cada dato y quién lo consume. Consultar una tabla no permite conocer por sí mismo qué proceso la alimenta ni la cadena de transformaciones previa. Si surge un problema, reconstruir esa cadena exige recorrer código, configuraciones y repositorios, saltando de un proceso a otro.
 
-La falta de trazabilidad obliga a investigar manualmente numerosos artefactos. Dificulta planificar cambios y aumenta la dependencia del conocimiento individual. El análisis de impacto es una capacidad derivada de descubrir y mantener ese linaje: para consultar consumidores entre DAGs, primero hay que conocer sus relaciones.
+La búsqueda puede ocupar varias horas o una jornada y aun así dejar dependencias sin identificar. Esta es una referencia cualitativa de la experiencia de trabajo, no una medición formal ni un promedio. El resultado depende del acceso a los repositorios, de la destreza para buscar y del conocimiento de las personas. Cuando ese conocimiento está incompleto o desactualizado, aumenta el riesgo de omisiones y conclusiones equivocadas.
 
-No se han medido tiempos de investigación, incidentes ni ahorros. Los permisos forman parte del contexto de gobierno, pero no se ha acordado incluir su descubrimiento o gestión en el prototipo.
+El problema crece con la cantidad de procesos y la profundidad de las cadenas. Repetir la búsqueda manual es costoso y difícil de mantener consistente. En el flujo actual no hay una vista de linaje disponible que resuelva esta necesidad; esto no implica que no existan herramientas de linaje en el mercado ni constituye una comparación de productos.
 
-## Personas y decisiones que necesitan tomar
+## Usuarios y situaciones de uso
 
-Los siguientes roles describen usuarios potenciales del caso simulado; no son participantes identificados ni entrevistados.
-
-| Rol | Situación y necesidad | Decisión que la solución ayudaría a fundamentar |
+| Usuario | Situación | Ayuda que recibe |
 | --- | --- | --- |
-| Ingeniero de datos, usuario principal | Recibe una solicitud para renombrar, eliminar o cambiar el tipo de una columna; debe investigar consumidores. | Qué artefactos revisar, qué pruebas preparar y qué información falta antes de integrar el cambio. |
-| Responsable de un pipeline, usuario secundario | Incorpora o modifica un DAG y necesita conocer sus entradas, salidas y dependencias. | Qué conocimiento registrar o actualizar para que otros puedan investigar el proceso. |
-| Líder técnico o responsable de plataforma, patrocinador hipotético | Necesita valorar esfuerzo, límites y riesgo de una modificación o de adoptar la herramienta. | Si la evidencia es suficiente para continuar la revisión y si el piloto merece inversión adicional. |
-| Consumidor de datos, beneficiario indirecto | Depende de resultados producidos por pipelines posteriores. | Qué validaciones funcionales necesita cuando un cambio puede alterar esos resultados. |
+| Ingeniero o analista | Necesita entender una tabla o columna sin proponer un cambio. | Origen, productores, consumidores y caminos de linaje. |
+| Ingeniero o analista | Investiga un problema conocido en un DAG. | Dependencias upstream para orientar la búsqueda y downstream para localizar consumidores que requieren revisión. |
+| Ingeniero que modifica un proceso | Renombra, elimina o cambia el tipo de una columna. | Dependencias directas y transitivas, evidencia y posibles caminos de afectación. |
+| Persona que se incorpora o retoma un proceso | No conoce el código o su documentación no está actualizada. | Un punto de entrada verificable para investigar sin depender exclusivamente de la memoria del equipo. |
 
-El prototipo identificará consumidores técnicos dentro de los artefactos analizados. No promete identificar personas, equipos propietarios ni consumidores externos cuya información no haya sido proporcionada.
+El diagnóstico se limita al linaje. No consulta logs ni estados de ejecución y no determina automáticamente la causa de un fallo. Los consumidores identificados son objetos y procesos técnicos; no se infieren personas responsables sin información explícita.
 
 ## Investigación actual y cambio propuesto
 
-Proceso actual reconstruido a partir del relato, todavía sin observación ni tiempos medidos:
+Proceso actual, sin mediciones formales:
 
-1. Recibir el cambio y precisar objeto, columna y operación.
+1. Recibir una consulta de origen, una investigación de un problema o una solicitud de cambio; identificar DAG, tabla o columna.
 2. Buscar referencias en DAGs, configuraciones y SQL; seguir alias, tablas intermedias y consumidores.
 3. Consultar documentación o conocimiento de otros desarrolladores cuando falte contexto.
 4. Preparar una lista de candidatos y verificaciones, con el riesgo de dejar supuestos sin documentar.
@@ -49,7 +47,7 @@ Proceso actual reconstruido a partir del relato, todavía sin observación ni ti
 
 Proceso propuesto: incorporar artefactos identificados por versión, consultar sus relaciones y revisar un reporte sustentado. El ingeniero conserva la responsabilidad de validar el cambio; el sistema le entrega una base de investigación reutilizable. La actualización del conocimiento pasa a formar parte del trabajo, por lo que debe medirse y no tratarse como gratuita.
 
-| Problema observado en el relato | Consecuencia posible | Evidencia que falta recoger |
+| Problema actual | Consecuencia posible | Evidencia que falta recoger |
 | --- | --- | --- |
 | Dependencias dispersas entre archivos y personas. | Repetición de investigación y coordinación. | Tiempo activo, archivos revisados y fuentes consultadas por caso. |
 | Origen o transformación de una columna poco visible. | Omisiones o revisión excesiva de consumidores. | Comparación con relaciones conocidas y falsas alarmas. |
@@ -90,15 +88,15 @@ Si falta el YAML de DAG 2, el resultado debe decir que su impacto por columna es
 
 **A. Descubrimiento incremental:** analizar los artefactos asociados a un DAG, extraer SQL y descubrir relaciones entre tablas y columnas, conservando STG y evidencia. Incorporar progresivamente ese conocimiento y considerar cambios o bajas de DAGs para no conservar relaciones obsoletas.
 
-**B. Análisis de impacto:** consultar el conocimiento disponible ante un cambio, recorrer relaciones directas e indirectas y explicar candidatos afectados, evidencia, límites y verificaciones recomendadas. La cobertura depende de los DAGs y versiones analizados; ausencia de relación registrada no implica ausencia de dependencia.
+**B. Consulta de linaje y análisis de impacto:** consultar origen y consumidores sin exigir un cambio como entrada; recorrer relaciones upstream y downstream para orientar investigaciones. Ante un cambio, explicar candidatos afectados, evidencia, límites y verificaciones recomendadas. La cobertura depende de los DAGs y versiones analizados; ausencia de relación registrada no implica ausencia de dependencia.
 
 El linaje de tablas y columnas tiene prioridad 1 desde el primer prototipo. Spark SQL es el dialecto de referencia; versión y patrones soportados pendientes. El PDI vigente dice desarrollar el parser en C11 y revisar el existente en Plan de Carrera C23: definir reutilización, adaptación o reemplazo requiere inspección y una decisión explícita. Ver [alcance vigente](alcance-y-exclusiones.md).
 
 ## Aporte esperado de la IA
 
-El valor principal se apoya en relaciones trazables. La IA podría traducirlas en una explicación del cambio, ordenar las verificaciones recomendadas y expresar qué falta conocer. Eso será útil solo si facilita entender el reporte sin inventar relaciones ni ocultar incertidumbre.
+El valor principal se apoya en relaciones trazables. La IA las traduce en explicaciones de las dependencias, posibles afectaciones y caminos de revisión, indicando qué falta conocer. Eso será útil solo si facilita entender el reporte sin inventar relaciones ni ocultar incertidumbre.
 
-Proponemos evaluar la explicación sobre los mismos resultados estructurados: comprobar citas, afirmaciones y claridad para responder qué revisar y por qué. Si no añade utilidad, reducir su función y documentarlo; el requisito de incorporar IA no justifica convertirla en autoridad sobre el linaje. Agentes, RAG y conversación no son decisiones tomadas.
+La evaluación de la explicación se realiza sobre los mismos resultados estructurados: comprobar citas, afirmaciones y claridad para responder qué revisar y por qué. Si no añade utilidad, reducir su función y documentarlo; el requisito de incorporar IA no justifica convertirla en autoridad sobre el linaje. Agentes, RAG y conversación no son decisiones tomadas.
 
 ## Alternativas de negocio
 
@@ -111,7 +109,30 @@ Comparación conceptual para este caso, sin evaluación de productos comerciales
 | Prototipo de descubrimiento incremental con explicación IA | Reutilización de conocimiento y consulta entre DAGs. | Desarrollo, mantenimiento, cobertura e incertidumbre. | Patrones repetidos y suficiente reutilización para compensar el costo inicial. |
 | Evaluar capacidades existentes de gobierno/linaje | Podría evitar construir funciones ya disponibles en la organización. | Inventario, acceso, cobertura de artefactos y esfuerzo de integración desconocidos. | Si existen herramientas accesibles con cobertura adecuada; no se ha comprobado. |
 
-Recomendación propuesta: comprobar la tercera opción con un corpus acotado y una comparación manual reproducible, manteniendo abierta la posibilidad de integrar una capacidad existente después. No presentar el prototipo como sustituto de herramientas empresariales sin haberlas evaluado.
+La opción elegida es el prototipo de descubrimiento incremental con explicación IA. Frente a una búsqueda aislada, permite conservar lo descubierto y consultarlo de nuevo; frente a documentación manual, vincula las relaciones con los artefactos que las sustentan y permite mantener sus versiones. Su ventaja depende de comprobar cobertura, actualización y esfuerzo total. No se descarta integrar herramientas existentes posteriormente, pero su disponibilidad y adecuación no están verificadas.
+
+## Ventajas y consecuencias para una plataforma con muchos procesos
+
+El orden de prioridad es: identificar dependencias omitidas, reducir tiempo de investigación y reducir dependencia del conocimiento individual.
+
+| Situación | Consecuencia posible si continúa | Ventaja buscada |
+| --- | --- | --- |
+| Procesos que se crean sin una visión compartida de sus relaciones. | Dependencias ocultas y dificultad para evaluar cambios. | Hacer consultables origen y consumidores dentro de la cobertura disponible. |
+| Cadenas que atraviesan varios DAGs y pasos intermedios. | Búsquedas prolongadas y caminos que quedan sin recorrer. | Seguir relaciones directas y transitivas conservando STG y evidencia. |
+| Una tabla se utiliza sin conocer qué la alimenta. | Investigar en componentes equivocados o no encontrar dónde comenzar. | Localizar productores y caminos upstream como punto de partida. |
+| Un proceso presenta problemas. | Dificultad para identificar consumidores que conviene revisar. | Mostrar caminos downstream, sin afirmar que el fallo se propagó en ejecución. |
+| Conocimiento concentrado en pocas personas. | Esperas, dificultades de incorporación y pérdida de contexto con cambios de equipo. | Conservar conocimiento verificable y reutilizable por ingenieros y analistas. |
+| Documentación manual o memoria desactualizada. | Decisiones apoyadas en relaciones antiguas o incompletas. | Asociar relaciones con versiones y mostrar límites de vigencia. |
+| Una investigación se repite. | Duplicación de búsqueda y coordinación. | Reutilizar el linaje acumulado y enfocar la revisión en lo relevante. |
+| Faltan repositorios o artefactos. | Confundir una vista parcial con ausencia de dependencias. | Señalar referencias no resueltas y qué información falta. |
+
+Estas ventajas son expectativas de valor, no ahorros ni incidentes evitados ya demostrados. El reporte no sustituye permisos de acceso ni descubre código que no se le proporciona.
+
+## Entrega mínima y condiciones de utilidad
+
+El MVP entrega un reporte con el objeto consultado, origen y consumidores de tablas y columnas, caminos entre DAGs y pasos intermedios relevantes. Cada relación permite localizar DAG, archivo, fragmento SQL y versión. Se incluyen artefactos analizados, información incompleta y referencias no resueltas.
+
+La explicación IA complementa ese núcleo con posibles afectaciones y recomendaciones sustentadas. No encontrar una dependencia no equivale a asegurar que un objeto no será afectado fuera de la cobertura analizada. La utilidad mínima es proporcionar un punto de partida trazable para investigar, sin exigir una interfaz web.
 
 ## Supuestos y riesgos del caso
 
@@ -123,7 +144,7 @@ Recomendación propuesta: comprobar la tercera opción con un corpus acotado y u
 | El subconjunto cabe en la capacidad individual. | Retraso del PDI o entrega superficial. | Estimar después de inspeccionar parser; ajustar patrones sin ocultar fechas ni degradar prioridades unilateralmente. |
 | Un corpus sintético sirve para probar mecánica y límites. | Resultados poco transferibles al entorno real. | Reportar esa limitación; exigir validación adicional antes de extrapolar beneficios. |
 
-Los riesgos técnicos detallados permanecen en [riesgos y limitaciones](../02-arquitectura/riesgos-y-limitaciones.md). El riesgo comercial principal es confundir una demostración de relaciones conocidas con una garantía de cobertura empresarial.
+Los riesgos técnicos detallados permanecen en [riesgos y limitaciones](../02-arquitectura/docs/sad.md#11-riesgos-y-deuda-técnica). El riesgo comercial principal es confundir una demostración de relaciones conocidas con una garantía de cobertura empresarial.
 
 ## Valor por validar y continuidad
 
@@ -131,11 +152,11 @@ Hipótesis: facilitar la investigación, reducir omisiones, mantener documentaci
 
 Este escenario reemplaza como hilo principal el borrador del 25/10 sobre ventas.total y vistas diarias/mensuales. El PDI original sigue incluyendo tablas, vistas y scripts; explicitar su correspondencia con el corpus de DAGs sin eliminar vistas silenciosamente.
 
-## Decisión que debe habilitar esta fase
+## Cierre del caso de negocio
 
-Este borrador permite revisar si el problema, usuario, recorrido y evidencia propuesta justifican continuar al diseño. La recomendación está condicionada a delimitar patrones, disponibilidad de artefactos y capacidad. Los [criterios propuestos](beneficios-y-criterios-de-exito.md) permiten decidir continuar, acotar o detener la extensión sin declarar éxito por haber construido una demo.
+H1-01 queda completado: problema, usuarios, situaciones de uso, prioridades de valor, alternativas y límites funcionales definidos. El MVP se justifica por hacer visible y reutilizable un conocimiento hoy disperso y costoso de reconstruir, empezando por reducir las dependencias que pasan inadvertidas.
 
-El hito de diseño sigue al 15/11/2026. Se ha desarrollado el caso documental; su aprobación, la arquitectura y el resultado del piloto son estados diferentes. Siguiente tarea: revisar los criterios propuestos y, con el parser y artefactos disponibles, concretar cobertura y estimación. No se requiere validación de un cliente real para cerrar el ejercicio del PDI.
+El cierre no exige demostrar todavía ahorro ni retorno económico. Los [beneficios](beneficios-y-criterios-de-exito.md) se contrastarán con resultados; el [modelo de costos](costos-y-esfuerzo.md) incluye construcción, actualización y verificación para no confundir una consulta rápida con ahorro neto. H1-02 mantiene la definición técnica de cobertura y arquitectura; H1-03 mantiene la estimación y capacidad. Las fechas del PDI no cambian.
 
 ---
 

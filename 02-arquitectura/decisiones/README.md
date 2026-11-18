@@ -1,11 +1,10 @@
-# Decisiones y revisión arquitectónica
+# Decisiones originales y revisión simulada
 
-**Estado: En curso.** Registrada una prioridad de alcance comunicada por el usuario; simulación completa con la conversación simulada entre la Ia como cliente y Óscar.
+Conservo aquí los registros originales del PDI con sus IDs y estados. Las nuevas decisiones de arquitectura se mantienen únicamente en [adr/](../adr/README.md), con la convención ArchFlow. Esta carpeta no es el destino de nuevos ADR.
 
-- [ADR-001: linaje incremental de tablas y columnas](ADR-001-prioridades-de-linaje.md), aceptada como prioridad. No selecciona tecnologías ni aprueba el diseño.
+- [ADR-001: prioridades](ADR-001-prioridades-de-linaje.md): prioridad aceptada; no equivale a aprobar la arquitectura completa.
+- [ADR-002: aplicaciones de lecturas](ADR-002-aplicacion-lecturas-al-diseno.md): incorporación documental vigente.
+- [ADR-003: alcance del caso](ADR-003-alcance-funcional-del-caso.md): alcance aceptado al 15/11/2026; su web opcional se amplía por SRC-019 y la propuesta ADR-0005, sin reescribir la aceptación original.
+- [Revisión simulada de H1-04](revision-simulada-hito-1.md): registro original y cierre v1.0 conservados; no es revisión real de cliente.
 
-- [Revisión simulada del hito 1](revision-simulada-hito-1.md), v0.1 del 06/11/2026, Terminada. 
-
-Crear ADR numerados cuando exista una decisión importante. Formato: título e ID, fecha, estado (Propuesta, Aceptada, Rechazada o Sustituida), contexto, alternativas, decisión, consecuencias y evidencia. Para Aceptada, registrar quién la aceptó y cuándo. Vincular el ADR sustituto sin borrar historia.
-
-La revisión simulada con IA tiene en el documento enlazado su único registro, separado de los ADR: fecha, versión revisada, preguntas, observación de IA, contraste con documentación/pruebas, aceptación o rechazo y motivo, cambio y evidencia. No presentarla como revisión de cliente o humana. El borrador generado no completa H1-04: faltan decisiones definitivas, ajustes enlazados y los contrastes técnicos pertinentes.
+La equivalencia de registros, la procedencia y las reglas de evolución están en [integración](../integracion-archflow.md). ADR-001 y ADR-0001 son registros distintos; no se renumeran ni fusionan.

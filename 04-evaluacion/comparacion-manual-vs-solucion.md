@@ -2,7 +2,7 @@
 
 **Estado: Pendiente.** Cinco comparaciones comprometidas; ninguna realizada.
 
-Protocolo propuesto: seleccionar cinco de los diez casos antes de medir; usar misma versión y pregunta; registrar persona, familiaridad con el corpus, herramientas, orden y criterio de inicio/fin. Medir lectura y verificación del resultado de la solución, además de su tiempo de ejecución. Separar preparación inicial, descubrimiento, mantenimiento del catálogo y consumo API. Comparar los mismos DAGs/versiones disponibles para ambos métodos. Informar por separado costo inicial y consulta sobre catálogo ya construido; no ocultar el primero para atribuir ahorro. Evitar consultar la salida automática antes del análisis manual o declarar el sesgo si ocurre.
+Protocolo propuesto: usar los casos 1, 3, 5, 8 y 9 seleccionados en el [plan canónico](../02-arquitectura/docs/validation.md#diez-cambios-de-impacto-seleccionados); usar misma versión y pregunta; registrar persona, familiaridad con el corpus, herramientas, orden y criterio de inicio/fin. Medir lectura y verificación del resultado de la solución, además de su tiempo de ejecución. Separar preparación inicial, descubrimiento, mantenimiento del catálogo y consumo API. Comparar los mismos DAGs/versiones disponibles para ambos métodos. Informar por separado costo inicial y consulta sobre catálogo ya construido; no ocultar el primero para atribuir ahorro. Evitar consultar la salida automática antes del análisis manual o declarar el sesgo si ocurre.
 
 | Caso | Método | Fecha/versión | Tiempo y unidad | Aciertos/omisiones/falsas alarmas | Evidencia | Sesgos/observaciones |
 | --- | --- | --- | --- | --- | --- | --- |

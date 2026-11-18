@@ -1,6 +1,20 @@
 # Revisión simulada del diseño — Hito 1
 
-**Fecha:** 06/11/2026 · **Versión:** 0.1 · **Compromiso:** H1-04 · **Estado:** Finalizada.
+**Fecha del ejercicio:** 06/11/2026 · **Cierre:** 15/11/2026 · **Versión:** 1.0 · **Compromiso:** H1-04 · **Estado:** Completado.
+
+## Cierre confirmado por Óscar — 15/11/2026
+
+Óscar confirma sus respuestas tal como están y da por cerrado este ejercicio. Las observaciones y recomendaciones de la IA se conservan para considerarlas conforme avance el proyecto; no constituyen decisiones de arquitectura aceptadas ni condiciones adicionales para completar H1-04.
+
+| Elemento | Decisión de cierre | Fundamento y continuidad |
+| --- | --- | --- |
+| Respuestas de Óscar en RS-01 a RS-16 | Se conservan como respuestas definitivas del ejercicio. | Expresan su criterio; no se requiere adaptarlas a las recomendaciones de la IA. |
+| Observaciones y recomendaciones de la IA | Se toman en consideración para el avance del proyecto, sin adopción ni rechazo técnico en bloque. | Su pertinencia y posible aplicación se decidirán cuando corresponda; las decisiones importantes se registrarán en ADR. |
+| Contrastes documentales | Se conservan como parte de la revisión realizada. | No acreditan pruebas del parser, capacidades de tecnologías ni resultados del prototipo. |
+| Referencias V-01 a V-08 y CT-01/CT-02 de la IA | Se conservan como referencias de propuestas sin desarrollo en este documento. | No son verificaciones ejecutadas ni requisitos adicionales de cierre; si se retoman, deberán concretarse en el diseño o evaluación correspondiente. |
+| Cierre de H1-04 | Completado por confirmación explícita de Óscar. | Evidencia: conversación, respuestas, reflexión y decisión sobre el tratamiento de las observaciones. Arquitectura y demás entregables mantienen su propio estado. |
+
+Este cierre prevalece sobre las recomendaciones de estado incluidas en la conversación. No supone aprobar automáticamente las propuestas técnicas ni completar el hito 1 entero.
 
 ## 1. Propósito y cómo usar este documento
 
@@ -14,16 +28,18 @@ Las decisiones importantes se documentarán en ADR según el [índice de decisio
 
 Documentos de base para la IA, para la elaboración de la simulación:
 
+Nota de mantenimiento del 17/11/2026: los borradores F4, F5, F6 y F8 fueron retirados por consolidación. Sus enlaces conducen ahora a los documentos sucesores; las fechas y descripciones de esta tabla identifican las fuentes originales del ejercicio. No implican que el SAD o el plan actuales fueran revisados en noviembre antes de su elaboración. Las respuestas, observaciones y decisiones de cierre del ejercicio se conservan.
+
 | Ref. | Documento y versión identificable | Uso en el contraste |
 | --- | --- | --- |
 | F1 | [Objetivos del PDI](../../00-pdi/Objetivos_PDI_2026.md), transcripción sincronizada el 28/10/2026 | Entregable, fecha, prioridad de tablas/columnas y separación de hitos. |
 | F2 | [Caso de negocio](../../01-caso-de-negocio/problema-y-contexto.md), v0.1 del 28/10/2026 | Usuario, problema, escenario y beneficios por validar. |
 | F3 | [Alcance](../../01-caso-de-negocio/alcance-y-exclusiones.md), refinamiento del 28/10/2026 | RF-01 a RF-05, cobertura pendiente y exclusiones propuestas. |
-| F4 | [Arquitectura de solución](../arquitectura-de-solucion.md), modelo conceptual del 28/10/2026 | Responsabilidades, contratos por definir, evidencia y actualización. |
-| F5 | [Alternativas](../alternativas.md), matriz del 28/10/2026 | Parser, persistencia, activación y función de IA. |
-| F6 | [Riesgos y limitaciones](../riesgos-y-limitaciones.md), versión disponible al consultar | Obsolescencia, contexto ausente, tiempo y explicaciones sin soporte. |
+| F4 | [Arquitectura de solución](../docs/sad.md), modelo conceptual del 28/10/2026 | Responsabilidades, contratos por definir, evidencia y actualización. |
+| F5 | [Alternativas](../adr/README.md), matriz del 28/10/2026 | Parser, persistencia, activación y función de IA. |
+| F6 | [Riesgos y limitaciones](../docs/sad.md#11-riesgos-y-deuda-técnica), versión disponible al consultar | Obsolescencia, contexto ausente, tiempo y explicaciones sin soporte. |
 | F7 | [Beneficios y criterios](../../01-caso-de-negocio/beneficios-y-criterios-de-exito.md), v0.1 del 28/10/2026 | B-01 a B-04 y CA-01 a CA-06, todavía propuestos. |
-| F8 | [Plan de evaluación](../../04-evaluacion/plan-de-evaluacion.md), propuesta del 28/10/2026 | Evidencias por preparar y distinción entre pruebas de mantenimiento y diez cambios. |
+| F8 | [Plan de evaluación](../docs/validation.md), propuesta del 28/10/2026 | Evidencias por preparar y distinción entre pruebas de mantenimiento y diez cambios. |
 
 
 Se toma como base el caso de negocio ya redactado. El ejercicio se centra en concretar su diseño, sin reescribirlo ni cambiar su estado de aceptación mediante esta simulación.
@@ -304,7 +320,7 @@ Son definiciones del ejercicio, no artefactos ejecutables ni relaciones descubie
 
 **Contraste:** F1 separa los entregables del hito; F4 lista contratos y mecanismos aún por completar.
 
-**Recomendación:** Mantener el diseño En curso y esta revisión En revisión. Las respuestas son editables; las decisiones definitivas se registran a continuación.
+**Recomendación original de la IA:** Mantener el diseño En curso y esta revisión En revisión. Esta recomendación de estado queda sustituida por el cierre confirmado por Óscar el 15/11/2026: H1-04 Completado; sus respuestas se conservan y el diseño mantiene su estado independiente.
 
 
 ## 6. Síntesis y reflexión propuesta

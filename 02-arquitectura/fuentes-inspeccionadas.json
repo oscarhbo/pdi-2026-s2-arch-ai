@@ -1,0 +1,155 @@
+{
+  "fecha": "2026-11-16",
+  "algoritmo": "SHA-256",
+  "alcance": "Archivos inventariados; profundidad de revision indicada en revision-parser-y-dags.md. Sin contenido de las fuentes.",
+  "archivos": [
+    {
+      "path": "C:/Oscar/Walmart/dag_analyzer/.gitignore",
+      "sha256": "8fd8d08a052f36f1feaab76ae03de49da3b9ac7981df642f02872ea629013654"
+    },
+    {
+      "path": "C:/Oscar/Walmart/dag_analyzer/analyzer_code/code_analyzer.py",
+      "sha256": "b3bac58d3a9eec18a93c5daefc89e58667fdb6007eb13c1475dd16524805c347"
+    },
+    {
+      "path": "C:/Oscar/Walmart/dag_analyzer/analyzer_code/config_analyzer.py",
+      "sha256": "786f7293cab7180a5ce4fa4f8e2faea28fbbca5fb89f079d02cb453d6f3b0350"
+    },
+    {
+      "path": "C:/Oscar/Walmart/dag_analyzer/analyzer_code/orchestrator.py",
+      "sha256": "7e1691f3e12d1b794666e0dd6bbf3f42551b7396fb5be872b8c6d82969acedb1"
+    },
+    {
+      "path": "C:/Oscar/Walmart/dag_analyzer/analyzer_code/sql_analyzer.py",
+      "sha256": "20874a2d51828ffa1fe05ba89e9664973aaca74d27fc13eb93d2730ee8daddc8"
+    },
+    {
+      "path": "C:/Oscar/Walmart/dag_analyzer/analyzer_code/utils.py",
+      "sha256": "72f8a23f832c258edb5556955fcd937ee0caa19815b77275894cdb62cc548941"
+    },
+    {
+      "path": "C:/Oscar/Walmart/dag_analyzer/analyzer_code/__init__.py",
+      "sha256": "d3ab7e6ff816544655c1980b4e60763ca49fc014a83cba3f8d4eb9aeaad66586"
+    },
+    {
+      "path": "C:/Oscar/Walmart/dag_analyzer/code_analyzer.json",
+      "sha256": "e2c2fd0d539a4e49f02c489702e8c07dcaaa4939066234118e80efeb632a71ee"
+    },
+    {
+      "path": "C:/Oscar/Walmart/dag_analyzer/dag_ctlg.csv",
+      "sha256": "682e9f5e6f62bbf22e3f3b99a8b22af9c912ca5f7bd5907b7c4db57bf2b6fb16"
+    },
+    {
+      "path": "C:/Oscar/Walmart/dag_analyzer/linage_ctlg.csv",
+      "sha256": "210d17a7b732a66125135b07560343b64c71d8ab42ed985cd7a07bd659247cd9"
+    },
+    {
+      "path": "C:/Oscar/Walmart/dag_analyzer/README.md",
+      "sha256": "92f9785ebd7687fab6530804f5db229207751c995d3ac63939ad966c0787db7c"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/ecomm_ords_hdr_trans_dcp/00_inc_mx_cust_secured_cons_dtmsh_tables_ecomm_ords_hdr_trans_set_dates.sh",
+      "sha256": "cce40ae1a50824aab34c3708d75ab11a6776c45b196e4e27b09b47e1dbee67b9"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/ecomm_ords_hdr_trans_dcp/01_inc_mx_cust_secured_cons_dtmsh_tables_ecomm_ords_hdr_trans_hs_cashi_stg.yaml",
+      "sha256": "1d29c3d6ce96594ebb0274f56d2f3b6c2bf32de4f829a67e5cfce827a092fd2a"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/ecomm_ords_hdr_trans_dcp/01_inc_mx_cust_secured_cons_dtmsh_tables_ecomm_ords_hdr_trans_hs_sales_ea_stg.yaml",
+      "sha256": "87ab0bc7f9f11857882e287719cb14c01ddb7bc7f93083d4139eb2f41ed637d8"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/ecomm_ords_hdr_trans_dcp/01_inc_mx_cust_secured_cons_dtmsh_tables_ecomm_ords_hdr_trans_hs_sales_od_stg.yaml",
+      "sha256": "f6be5406bfb755533af5a35b560b10677f0e5255c393460f5633909783cfc621"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/ecomm_ords_hdr_trans_dcp/01_inc_mx_cust_secured_cons_dtmsh_tables_ecomm_ords_hdr_trans_hs_sales_ords_st_desc_stg.yaml",
+      "sha256": "0a861be27339151f7af0b4821a354c235f7f45bbb8c7006d532ce4d0f26cac05"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/ecomm_ords_hdr_trans_dcp/01_inc_mx_cust_secured_cons_dtmsh_tables_ecomm_ords_hdr_trans_hs_ucv_stg.yaml",
+      "sha256": "655eaf58636673b3214a0db7599a4054c82e8612333f44a143f8fded2cf08b03"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/ecomm_ords_hdr_trans_dcp/01_inc_mx_cust_secured_cons_dtmsh_tables_ecomm_ords_hdr_trans_hs_yfs_od_stg.yaml",
+      "sha256": "340c2f50592bfca31102b69540383fd35183d7e17f882caac6663e7c84491c3f"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/ecomm_ords_hdr_trans_dcp/02_inc_mx_cust_secured_cons_dtmsh_tables_ecomm_ords_hdr_trans_hs_ea_merge_stg.yaml",
+      "sha256": "305b7fd176f00f3d5c36b31971b75d675468f2586ef54844845624e0af4cf633"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/ecomm_ords_hdr_trans_dcp/02_inc_mx_cust_secured_cons_dtmsh_tables_ecomm_ords_hdr_trans_hs_ea_sales_merge_stg.yaml",
+      "sha256": "1f4c377b7f181a7a0cfa8e5bac734a6eb52fdd62982dbf5b03cd9c7416c22c93"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/ecomm_ords_hdr_trans_dcp/02_inc_mx_cust_secured_cons_dtmsh_tables_ecomm_ords_hdr_trans_hs_ea_ucv_merge_stg.yaml",
+      "sha256": "86a53cb2a5aefe9b85f2c65d53744f14933cc0dde107e385250357ab525dd869"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/ecomm_ords_hdr_trans_dcp/02_inc_mx_cust_secured_cons_dtmsh_tables_ecomm_ords_hdr_trans_hs_od_merge_stg.yaml",
+      "sha256": "2ed3aa0a85ebc0d8247a0c04597ffa55ec13226ec1876acc333ca18164e6c608"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/ecomm_ords_hdr_trans_dcp/02_inc_mx_cust_secured_cons_dtmsh_tables_ecomm_ords_hdr_trans_hs_od_sales_merge_stg.yaml",
+      "sha256": "cdccb520b528c211a09f1c4a4c82b92d14e9a6e71a35645922546e9bee1f73a8"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/ecomm_ords_hdr_trans_dcp/02_inc_mx_cust_secured_cons_dtmsh_tables_ecomm_ords_hdr_trans_hs_od_ucv_merge_stg.yaml",
+      "sha256": "0a043ccb31b74716cc3905ea2633f0b5fa58345afb289d870b0e32891441504f"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/ecomm_ords_hdr_trans_dcp/03_inc_mx_cust_secured_cons_dtmsh_tables_ecomm_ords_hdr_trans_hs_load_target.yaml",
+      "sha256": "fefed6302080b22e4d9c8c8527e142738cd03a9352f60e48c89200bbb7da4568"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/ecomm_ords_hdr_trans_dcp/CRM-DCP-INC-MX_CUST_SECURED_CONS_DTMSH_TABLES-ECOMM_ORDS_HDR_TRANS-HS.py",
+      "sha256": "7615b7e9aa86a5743b5b9f0155a5b5b8d1e2c52a34fe8991a79f0d6d41d3a17d"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/ecomm_ords_hdr_trans_dcp/crm_dcp_inc_mx_cust_secured_cons_dtmsh_tables_ecomm_ords_hdr_trans_hs_config.yaml",
+      "sha256": "bb5320f98b7f7e62ae735dab4777b00d58f88a7443185abad7f6a7341dca9c74"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/ecomm_ords_hdr_trans_dcp/inc_mx_cust_secured_cons_dtmsh_tables_ecomm_ords_hdr_trans_properties.yaml",
+      "sha256": "c1346ae063a3fba522a5d3b5b9972e8187af12c471f233061d826ae9e9765fda"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/sams_ords_hdr_trans/00_inc_mx_cust_secured_cons_dtmsh_tables_sams_ords_hdr_trans_load_target_set_dates.sh",
+      "sha256": "e61dd864cfc96530d2ac456274a70966c7ca6a0aec0c6aa1aef37a76e10084cf"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/sams_ords_hdr_trans/01_inc_mx_cust_secured_cons_dtmsh_tables_hs_sams_sale_hdr_fact_stg.yaml",
+      "sha256": "33a96a7606c44c5bd957bfcfbedd8a67dbf8570132724c8d237c9a05a11aaa4a"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/sams_ords_hdr_trans/02_inc_mx_cust_secured_cons_dtmsh_tables_hs_sams_mx_ucv_identity_mapping_stg.yaml",
+      "sha256": "b35f9aa59cb5906bc263ed4061190bbff5ddca7ab80836b03c1df74a10587e20"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/sams_ords_hdr_trans/03_inc_mx_cust_secured_cons_dtmsh_tables_hs_sams_cust_afflt_sams_stg.yaml",
+      "sha256": "69a2fb5bf1334ea599bb94fbadabb22f15e1374fd9efe1f54965ac395a900fa4"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/sams_ords_hdr_trans/04_inc_mx_cust_secured_cons_dtmsh_tables_hs_sams_druid_sales_order_detail_stg.yaml",
+      "sha256": "6f8bf8d810fa42d947482a28d2c0a713c3cae75e3efe7b4c1972006b58284cd6"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/sams_ords_hdr_trans/05_inc_mx_cust_secured_cons_dtmsh_tables_hs_sams_ords_hdr_trans_load.yaml",
+      "sha256": "064d953d9ad51f8926644f038eae8bb0709085539876db4f0d1a455f2331205d"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/sams_ords_hdr_trans/CRM-SAMS-INC-CONS_MX_CUST_SECURED_CONS_DTMSH_TABLES_CUST_ORDS_HDR-HS.py",
+      "sha256": "0ad13fba63202a083e4e41fd0fcfb8679d4ae12c95b538ce88c5aa0dd88d0679"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/sams_ords_hdr_trans/crm_sams_inc_cons_mx_cust_secured_cons_dtmsh_tables_cust_ords_hdr_hs_config.yaml",
+      "sha256": "2a93e57b8b708c435d9198e2b632a57258515c9b5caf181829805dff431aaba9"
+    },
+    {
+      "path": "C:/Oscar/Walmart/Dags_CRM/sams_ords_hdr_trans/inc_cons_mx_cust_secured_cons_dtmsh_tables_cust_ords_hdr_properties.yaml",
+      "sha256": "f3a122b02eaf2aee28b5ce6a63863484fb295250dc00a26ad90eefb947cbc866"
+    }
+  ]
+}

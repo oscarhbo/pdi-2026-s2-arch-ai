@@ -1,101 +1,166 @@
 # Aplicación del aprendizaje al proyecto
 
-Propósito: relacionar el aprendizaje con decisiones, cambios y pruebas. Mantener las notas de estudio en su carpeta de [aprendizaje](README.md). Documentar aquí las aplicaciones concretas al proyecto y enlazar los conceptos que las sustentan, sin duplicar el contenido del libro.
+**Versión 1.0 · 15/11/2026 · H1-05: aplicación al diseño documentada.**
 
-| Recurso / nota | Concepto aprendido | Aplicación al proyecto | Enlace a evidencia | Estado |
-| --- | --- | --- | --- | --- |
-| [AI Engineering](libros/ai-engineering.md) | Evaluación por componentes y tarea, contexto con evidencia y feedback validado. | [AIE-01 a AIE-03: evaluación, contexto y regresión](libros/ai-engineering.md#aplicacion). | [Transferencia de estudio](../00-pdi/fuentes/Context_Transfer/ai_engineering_contexto_completo_codex.md) y notas consolidadas el 10/11/2026; sin pruebas ni decisiones aceptadas. | Estudio documentado; aplicación propuesta. |
-| [A Philosophy of Software Design](libros/a-philosophy-of-software-design.md) | Módulos profundos, ocultamiento de información, contratos y diseño estratégico. | [Tres aplicaciones propuestas](#aplicaciones-software-design). | Notas de estudio disponibles; sin decisión aceptada ni implementación verificada de estas propuestas. | Estudio documentado; aplicación propuesta. |
-| [TOGAF Standard, 10th Edition](cursos/togaf-standard-10th-edition.md) | Baseline/Target, brechas, requisitos y gobierno. | [Propuestas para el analizador de linaje](cursos/togaf-standard-10th-edition.md#aplicacion). | Sin implementación ni resultado verificado. | Propuesta de aplicación; curso completado según confirmación del usuario. |
+Este documento establece cómo se aplican las notas de estudio al analizador de linaje e impacto. Es la ubicación única de estas aplicaciones; la arquitectura las incorpora por referencia. Define el comportamiento de diseño, no resultados de pruebas ejecutadas.
 
-No confundir una intención de aplicación con una modificación verificada. Las constancias se enlazan cuando existan; no se exige completar cursos enteros por inferencia.
+| Recurso | Aplicación al diseño | Evidencia |
+| --- | --- | --- |
+| [A Philosophy of Software Design](libros/a-philosophy-of-software-design.md) | Módulos profundos, contratos, actualización y separación de responsabilidades. | APSD-01 a APSD-05 de este documento. |
+| [AI Engineering](libros/ai-engineering.md) | Evaluación, contexto con evidencia, regresión y operación. | AIE-01 a AIE-05 de este documento. |
+| [TOGAF Standard, 10th Edition](cursos/togaf-standard-10th-edition.md) | Formación complementaria; aplicaciones recogidas en las notas del curso. | Curso completado según confirmación de Óscar; no sustituye las lecturas del PDI. |
+
+Architecting AI Software Systems corresponde a formación continua durante el hito 2, conforme a la aclaración de Óscar del 15/11/2026. No condiciona el cierre de H1-05. Se conserva el Excel original; su referencia bibliográfica precisa sigue por completar.
+
+Las reglas siguientes son aplicaciones de ingeniería al caso del PDI basadas en las notas disponibles, no recetas textuales atribuidas a los autores. Véase el fundamento en [ADR-002](../02-arquitectura/decisiones/ADR-002-aplicacion-lecturas-al-diseno.md).
 
 <a id="aplicaciones-software-design"></a>
-## A Philosophy of Software Design: Aplicaciones al proyecto
-
-**Fecha de revisión:** 29/10/2026. **Estado:** propuestas para evaluar; ninguna aceptada o implementada por este registro.
-
-### Validación de las notas y selección
-
-La revisión de las notas frente a la [arquitectura conceptual](../02-arquitectura/arquitectura-de-solucion.md) y el [alcance propuesto](../01-caso-de-negocio/alcance-y-exclusiones.md) permite concretar tres aplicaciones pertinentes. Es una revisión de coherencia y utilidad para el proyecto, no una comprobación íntegra del texto del libro ni una validación del parser, cuyo código no se ha inspeccionado.
-
-Conviene conservar estos matices al aplicar lo estudiado:
-
-- **Profundidad no equivale a una función que haga todo.** La interfaz debe simplificar una responsabilidad coherente sin mezclar descubrimiento, persistencia y explicación por comodidad.
-- **Ocultar implementación no significa ocultar evidencia.** Podemos encapsular nodos internos del parser, pero el consumidor necesita conocer procedencia, cobertura y referencias no resueltas.
-- **Eliminar errores por diseño no significa ignorar fallos.** Repetir una actualización válida puede ser una operación normal; una extracción fallida nunca debe interpretarse como ausencia de dependencias.
-- **Separar abstracciones no obliga a crear microservicios.** Las fronteras pueden ser módulos dentro del mismo proceso; cada separación debe justificar el conocimiento que aísla.
-
-Las propuestas siguientes son aplicaciones propias al PDI. Idempotencia, publicación de versiones y controles sobre IA se usan como decisiones de ingeniería por evaluar, no como recetas textuales atribuidas al autor.
+## A Philosophy of Software Design
 
 <a id="apsd-01"></a>
-### APSD-01 — Definir un contrato estable para el análisis de linaje
+### APSD-01 — Contrato estable y ocultamiento de información
 
-**Conceptos:** [módulos profundos](libros/a-philosophy-of-software-design.md#tema-4), [ocultamiento de información](libros/a-philosophy-of-software-design.md#tema-5) y [contratos antes de implementar](libros/a-philosophy-of-software-design.md#tema-15). Relación con RF-01 y RF-02 del alcance propuesto.
+**Conceptos:** [módulos profundos](libros/a-philosophy-of-software-design.md#tema-4), [ocultamiento de información](libros/a-philosophy-of-software-design.md#tema-5) y [contratos antes del código](libros/a-philosophy-of-software-design.md#tema-15). Relación con RF-01 y RF-02.
 
-**Problema que buscamos evitar.** Si cada consumidor debe entender nodos del parser, aliases y convenciones de YAML para consultar una relación, un cambio interno puede propagarse al catálogo, a la consulta y al reporte.
+El análisis recibe artefactos identificados por DAG y versión, configuración, SQL extraído y contexto disponible de esquemas y parámetros. Devuelve un modelo del dominio independiente de los nodos internos del parser:
 
-**Aplicación propuesta.** Definir una operación de análisis con entradas y salidas explícitas. Recibiría los artefactos identificados por versión y el contexto disponible; devolvería relaciones de tablas y columnas, pasos STG relevantes, evidencia localizable y diagnósticos. El contrato indicaría que analizar no publica por sí mismo una nueva versión del catálogo.
+| Información | Contenido y significado |
+| --- | --- |
+| Identidad | DAG, versión de artefactos, analizador y contexto utilizado. |
+| Relaciones | Origen, destino, granularidad tabla/columna, tipo valor/condición y pasos STG. |
+| Evidencia | Identificador de referencia, archivo, ubicación, fragmento y versión. |
+| Cobertura | Artefactos y patrones analizados, referencias no resueltas y diagnósticos. |
+| Sustento | Verificado, Inferido o Desconocido; no equivale a ejecutar el cambio. |
+| Resultado de operación | Completo dentro de la cobertura declarada, parcial o fallido. |
 
-El módulo ocultaría la representación interna del parser y sus recorridos. Mantendría visibles las distinciones que necesitamos para interpretar el resultado: relaciones de valor o condición, referencias no resueltas, cobertura y sustento Verificado/Inferido/Desconocido. Estos últimos describen el sustento de una relación, no el éxito global del análisis ni un fallo ejecutado.
+Analizar no publica en el catálogo. El consumidor interpreta el resultado sin manipular el AST ni conocer las convenciones internas del extractor. Un patrón no soportado o un esquema ausente produce un diagnóstico, no un éxito vacío.
 
-**Ejemplo sintético.** Si una columna de salida se calcula con precio y cantidad, el resultado debe permitir rastrear ambas entradas y su evidencia. Si falta el esquema para resolver una proyección, debemos comunicar la limitación; una lista vacía de columnas no basta para afirmar que no existen dependencias.
+**Ejemplo sintético:** para total = precio × cantidad se conservan ambos orígenes y su evidencia. Si no se puede resolver un comodín, se declara qué información falta.
 
-**Trade-off.** Un modelo de salida propio requiere mantener una adaptación desde el parser. Se justifica si reduce el acoplamiento; no conviene construir un modelo universal para dialectos y casos fuera de alcance.
-
-**Cómo validar la propuesta.** Preparar ejemplos sintéticos de proyección, paso STG y referencia no resuelta, dentro de la cobertura que se acuerde. Verificar que un consumidor pueda interpretar las salidas sin acceder a nodos del parser y que un cambio de representación interna compatible no obligue a modificarlo. Comprobar por separado que cada relación conserve evidencia.
-
-**Evidencia esperada:** contrato documentado, ejemplos de entradas/salidas y pruebas de comportamiento cuando exista implementación. No hay resultados de estas comprobaciones todavía.
+**Trade-off:** el adaptador al modelo propio tiene costo, pero evita propagar cambios del parser a todos los consumidores. Ocultar implementación no significa ocultar evidencia.
 
 <a id="apsd-02"></a>
-### APSD-02 — Encapsular la actualización del conocimiento por DAG
+### APSD-02 — Encapsular actualización y errores
 
-**Conceptos:** [asumir complejidad dentro del módulo](libros/a-philosophy-of-software-design.md#tema-8), [simplificar errores desde el contrato](libros/a-philosophy-of-software-design.md#tema-10) y [comparar diseños](libros/a-philosophy-of-software-design.md#tema-11). Relación con RF-03.
+**Conceptos:** [concentrar complejidad](libros/a-philosophy-of-software-design.md#tema-8), [simplificar errores desde el contrato](libros/a-philosophy-of-software-design.md#tema-10) y [comparar diseños](libros/a-philosophy-of-software-design.md#tema-11). Relación con RF-03.
 
-**Problema que buscamos evitar.** Reanalizar un DAG puede duplicar relaciones, conservar relaciones que ya no existen o eliminar aportes de otros DAGs. Si cada invocador resuelve estas situaciones por su cuenta, la política se dispersa.
+La publicación reemplaza la contribución vigente de un DAG como una unidad después de preparar y comprobar su nuevo análisis. Conserva la procedencia de otros DAGs y no expone una mezcla intermedia de versiones.
 
-**Aplicación propuesta.** Concentrar la política de actualización en una responsabilidad que reciba el resultado de análisis y su versión. Comparar dos alternativas antes de elegir:
+- Repetir el mismo análisis con iguales artefactos y contexto no duplica relaciones.
+- Un análisis parcial o fallido no reemplaza el último resultado completo; conserva diagnósticos y comunica la antigüedad del resultado disponible.
+- Si no existe resultado previo, se declara esa ausencia.
+- La baja requiere una operación explícita; un archivo ausente no equivale a retirada.
+- La publicación comprueba la versión vigente que esperaba reemplazar. Si cambió durante el análisis, no sobrescribe silenciosamente el resultado más reciente.
+- Esquemas, parámetros y versión del analizador forman parte de la identidad del análisis; cambios relevantes obligan a revisar la vigencia de resultados dependientes.
 
-| Alternativa | Ventaja posible | Costo o riesgo |
-| --- | --- | --- |
-| Reemplazar el conjunto de aportes del DAG al publicar una versión válida. | Facilita razonar sobre qué relaciones pertenecen a la versión vigente. | Requiere conservar procedencia y publicar el cambio sin exponer un estado intermedio inconsistente. |
-| Aplicar diferencias entre versiones. | Puede reducir el trabajo de actualización cuando el conjunto es grande. | Añade comparación, identidad estable y más casos de recuperación y borrado. |
+**Ejemplo sintético:** A deja de aportar una relación y B la mantiene. Actualizar A retira solo su procedencia. Un fallo conserva la versión anterior de A con una advertencia visible.
 
-Para el primer diseño conviene explorar el reemplazo por contribución del DAG por su facilidad de razonamiento; sigue siendo una recomendación, no una decisión aceptada. No supone recalcular todos los DAGs de la plataforma.
-
-**Reglas candidatas del contrato.** Reprocesar la misma versión con el mismo contexto de análisis no duplicaría relaciones. Una nueva publicación retiraría los aportes anteriores de ese DAG y conservaría los de los demás. Un análisis fallido no borraría silenciosamente el último resultado válido: se registraría el fallo y se haría visible que el resultado conservado corresponde a una versión anterior. La baja explícita de un DAG tendría una operación distinta de un fallo de lectura.
-
-La identidad del análisis debe contemplar cambios relevantes de esquemas, parámetros y versión del analizador; el contenido del DAG por sí solo puede ser insuficiente. La política ante resultados parciales y publicaciones fuera de orden debe quedar explícita antes de implementar.
-
-**Ejemplo sintético.** El DAG A deja de producir una relación en su versión nueva, mientras B mantiene un aporte equivalente. Al actualizar A, debemos retirar solo su procedencia anterior y conservar la de B.
-
-**Trade-off.** Centralizar esta responsabilidad simplifica a los consumidores, pero exige definir versiones, límites de publicación y recuperación. No selecciona una base de datos ni obliga a utilizar infraestructura distribuida.
-
-**Cómo validar la propuesta.** Diseñar casos para repetición del mismo análisis, sustitución de una relación, contribuciones compartidas, fallo de análisis, baja explícita y llegada tardía de una versión anterior. Comprobar ausencia de duplicados, preservación de aportes ajenos y visibilidad de la versión consultada. Son verificaciones previstas, no pruebas ejecutadas ni sustitutos de los diez cambios comprometidos en el PDI.
-
-**Evidencia esperada:** comparación de alternativas, contrato de actualización y pruebas del estado antes/después cuando exista implementación.
+**Alternativas y trade-off:** reemplazar por contribución facilita retirar relaciones obsoletas. Actualizar diferencias puede reducir escrituras, pero aumenta la complejidad de comparación y recuperación. Se utiliza reemplazo por DAG; mecanismo de almacenamiento y retención histórica se detallan en H1-02.
 
 <a id="apsd-03"></a>
-### APSD-03 — Separar los resultados de impacto de su explicación con IA
+### APSD-03 — Separar análisis, consulta y explicación
 
-**Conceptos:** [abstracciones distintas por capa](libros/a-philosophy-of-software-design.md#tema-7), [responsabilidades coherentes](libros/a-philosophy-of-software-design.md#tema-9) y [comportamiento predecible](libros/a-philosophy-of-software-design.md#tema-18). Relación con RF-04 y RF-05.
+**Conceptos:** [abstracciones por capa](libros/a-philosophy-of-software-design.md#tema-7) y [responsabilidades coherentes](libros/a-philosophy-of-software-design.md#tema-9). Relación con RF-04 y RF-05.
 
-**Problema que buscamos evitar.** Si descubrir dependencias, consultar impacto y redactar una explicación son una sola operación sin fronteras claras, resulta difícil distinguir un hallazgo sustentado de una inferencia de IA y comprobar qué cambió cuando varía el modelo.
+El análisis descubre relaciones; el catálogo conserva aportes y versiones; la consulta recorre dependencias; la IA explica el resultado. La consulta entrega cambio solicitado, versión consultada, caminos, evidencia y límites. La explicación no modifica el catálogo ni eleva inferencias a relaciones verificadas.
 
-**Aplicación propuesta.** La consulta produciría un resultado estructurado con cambio solicitado, versión consultada, caminos de dependencia, evidencia y límites. La explicación recibiría ese resultado para describirlo y sugerir verificaciones. No modificaría el catálogo ni elevaría una inferencia a relación verificada.
+Son módulos lógicos, no una obligación de desplegar servicios independientes. Cada frontera aísla una razón de cambio: extracción, resolución, almacenamiento, recorrido o generación de texto.
 
-Ambas responsabilidades pueden vivir en el mismo proceso. La separación se justifica por sus contratos y razones de cambio, no por el número de clases o servicios.
+**Ejemplo sintético:** B consume total y C solo identificadores de la misma tabla. El reporte distingue dependencia de valor y consumo de tabla; no garantiza que C siga ejecutándose si falla el productor.
 
-**Ejemplo sintético.** A produce una tabla con la columna total; B consume total y C solo utiliza un identificador de esa tabla. Una dependencia de tabla no basta para afirmar impacto de valor en todas las columnas de C. La explicación debe conservar lo que demuestra el camino de columnas y señalar las condiciones o referencias que el análisis no haya resuelto.
+**Trade-off:** mantener resultado estructurado y explicación añade trabajo, pero permite comprobar impacto sin llamadas IA y cambiar el generador sin alterar relaciones.
 
-**Trade-off.** Mantener un resultado estructurado y comprobar la explicación añade trabajo, pero permite probar la consulta sin invocar IA y cambiar la generación de texto sin cambiar las relaciones descubiertas. La separación por sí sola no impide afirmaciones incorrectas: hay que comprobar correspondencia entre afirmaciones, referencias y límites.
+<a id="apsd-04"></a>
+### APSD-04 — Nombres, invariantes y documentación semántica
 
-**Cómo validar la propuesta.** Usar un resultado sintético conocido y revisar que toda afirmación presentada como verificada tenga sustento, que las inferencias permanezcan identificadas y que el catálogo no cambie al generar texto. Ante fallo de la IA, conservar accesible el resultado estructurado y señalar que la explicación no se generó. Ese comportamiento no elimina el compromiso del PDI de demostrar el aporte de IA.
+**Conceptos:** [nombres](libros/a-philosophy-of-software-design.md#tema-14), [consistencia](libros/a-philosophy-of-software-design.md#tema-17) y [comportamiento evidente](libros/a-philosophy-of-software-design.md#tema-18).
 
-**Evidencia esperada:** contrato consulta-explicación, casos de contradicción o evidencia insuficiente y registro de revisión de explicaciones cuando exista implementación. No hay ejecuciones ni métricas acreditadas.
+Cada contrato documenta significado, precondiciones, efectos secundarios y errores. Se diferencia relación de valor, dependencia de condición, consumidor de tabla y candidato de impacto. Verificado significa respaldado por evidencia del análisis, no rotura comprobada.
 
-### Orden de trabajo sugerido
+Las identidades incorporan ámbito: dos STG con igual nombre no se fusionan sin evidencia. El orden de tareas no demuestra flujo de datos ni identifica por sí solo el target. Cada camino conserva evidencia por tramo.
 
-Empezar por APSD-01, porque el resultado del análisis condiciona las otras dos aplicaciones. Después concretar APSD-02 para definir qué versión y cobertura consultamos; finalmente delimitar APSD-03 sobre ese conocimiento. Podemos contrastar contratos con ejemplos sintéticos antes de disponer del parser, pero su integración requiere inspeccionar las capacidades reales.
+**Trade-off:** mantener un vocabulario preciso requiere disciplina, pero evita interpretaciones incompatibles entre componentes.
 
-La siguiente acción propuesta es redactar entradas, salidas e invariantes de APSD-01 usando un DAG sintético representativo. Si se acepta una decisión arquitectónica, registrar su fundamento y consecuencias en un ADR. Este documento conserva las aplicaciones como propuestas hasta entonces.
+<a id="apsd-05"></a>
+### APSD-05 — Evolución y rendimiento guiados por evidencia
+
+**Conceptos:** [diseño estratégico](libros/a-philosophy-of-software-design.md#tema-3), [evolución](libros/a-philosophy-of-software-design.md#tema-16) y [rendimiento](libros/a-philosophy-of-software-design.md#tema-20).
+
+La inspección del parser precede a reutilizarlo, adaptarlo o reemplazarlo. Se conservan tablas y columnas y se acotan patrones, sin diseñar una solución universal para dialectos fuera del PDI. Se miden extracción, resolución, publicación, consulta y explicación antes de añadir caché, paralelismo o infraestructura.
+
+**Trade-off:** invertir en contratos reduce acoplamiento futuro; no justifica construir funcionalidades sin necesidad presente.
+
+<a id="aplicaciones-ai-engineering"></a>
+## AI Engineering
+
+<a id="aie-01"></a>
+### AIE-01 — Evaluar componentes y tarea completa
+
+**Conceptos:** [metodología](libros/ai-engineering.md#tema-3), [evaluación integral](libros/ai-engineering.md#tema-4) y [datos de evaluación](libros/ai-engineering.md#tema-8).
+
+Antes de ejecutar se fijan artefactos sintéticos, relaciones esperadas y criterios de explicación. Se evalúan por separado:
+
+| Dimensión | Comprobación |
+| --- | --- |
+| Linaje e impacto | Esperado frente a obtenido; omisiones y falsos positivos por tablas, columnas y condiciones. |
+| Mantenimiento | Repetición, modificación, baja, fallo, versiones y aportes ajenos. |
+| Fidelidad | Afirmaciones respaldadas por evidencia y conservación de límites. |
+| Utilidad | Claridad sobre qué revisar y por qué; esfuerzo de consulta y verificación. |
+
+La rúbrica de explicación comprueba exactitud, pertinencia de citas, incertidumbre y claridad. Una cita existente pero irrelevante no es sustento. Un formato válido no demuestra veracidad. La evaluación asistida por IA no constituye la única referencia de corrección.
+
+**Trade-off:** preparar esperados y segmentar resultados exige trabajo, pero evita que una redacción convincente oculte omisiones. Se conservan los diez cambios de H2 y las cinco comparaciones de H3.
+
+<a id="aie-02"></a>
+### AIE-02 — Contexto pertinente con evidencia
+
+**Conceptos:** [construcción del contexto](libros/ai-engineering.md#tema-5) y [recuperación y herramientas](libros/ai-engineering.md#tema-6).
+
+La explicación recibe cambio solicitado, versión consultada, caminos relevantes, identificadores y fragmentos de evidencia, cobertura y referencias no resueltas. Se conservan los tramos y límites necesarios para sostener la conclusión.
+
+La salida separa hechos, inferencias identificadas y verificaciones recomendadas. Si falta evidencia declara qué no puede determinar. Los comentarios y textos de los artefactos son datos, no instrucciones autorizadas. El componente de explicación no dispone de operaciones de escritura en el catálogo.
+
+**Ejemplo sintético:** sin YAML de B, su nombre no demuestra que use total. La explicación comunica qué falta conocer.
+
+**Trade-off:** acotar contexto reduce ruido y consumo, pero una selección excesiva elimina soporte. Si no cabe la evidencia necesaria, se comunica cobertura parcial, sin ocultarla.
+
+<a id="aie-03"></a>
+### AIE-03 — Convertir errores confirmados en regresiones
+
+**Conceptos:** [calidad de datos](libros/ai-engineering.md#tema-8) y [feedback](libros/ai-engineering.md#tema-10).
+
+Cada error confirmado conserva entrada, versión, esperado, obtenido, causa, corrección y resultado de repetición. Se clasifica por extracción, resolución, actualización, consulta, contexto o explicación para corregir el componente responsable.
+
+Cambios de prompt, modelo o parser se comparan sobre casos versionados. Se separan ejemplos de ajuste y evaluación y se declara su eventual reutilización. El feedback se contrasta antes de convertirlo en referencia esperada.
+
+**Trade-off:** mantener regresiones cuesta esfuerzo, pero permite detectar deterioros. Modificar el esperado para que coincida con una salida incorrecta no corrige el sistema.
+
+<a id="aie-04"></a>
+### AIE-04 — Complejidad proporcional a la tarea
+
+**Conceptos:** [aplicaciones con IA](libros/ai-engineering.md#tema-1), [agentes y herramientas](libros/ai-engineering.md#tema-6) y [adaptación](libros/ai-engineering.md#tema-7).
+
+El diseño utiliza un flujo explícito de análisis, publicación, consulta y explicación. La IA interpreta evidencia; el componente de linaje mantiene su propia evaluación. No se incorpora autonomía, recuperación vectorial o entrenamiento por el solo hecho de aparecer en la formación.
+
+Una ampliación identifica primero una carencia observada y se compara con la base en calidad, esfuerzo y costo. Proveedor y modelo se eligen según tarea y restricciones, sin quedar seleccionados por este documento.
+
+**Trade-off:** el flujo explícito limita flexibilidad, pero facilita reproducibilidad y control de fallos en un prototipo individual.
+
+<a id="aie-05"></a>
+### AIE-05 — Observabilidad, costo y respuesta ante fallos
+
+**Conceptos:** [inferencia](libros/ai-engineering.md#tema-9) y [operación](libros/ai-engineering.md#tema-10).
+
+Cada ejecución identifica artefactos, analizador, catálogo y, cuando aplique, modelo, configuración y prompt. Registra tiempos por etapa, errores, reintentos y consumo disponible. El costo se calcula con precios verificados al elegir proveedor; USD 20 sigue siendo presupuesto propuesto, no autorización de gasto.
+
+Si falla la IA o no se valida el respaldo de su explicación, el reporte conserva el resultado estructurado e indica que el texto no está disponible o validado. Esto no sustituye demostrar el aporte de IA en el prototipo.
+
+**Trade-off:** observar y comprobar añade esfuerzo, pero distingue costo de generación, costo de verificación y calidad. Se utilizan datos sintéticos y no se registran secretos.
+
+## Recorrido integrado y evidencia de aplicación
+
+A calcula total desde precio y cantidad, B consume total y C solo identificadores. APSD-01 conserva relaciones y evidencia; APSD-02 publica contribuciones sin duplicar ni borrar aportes ajenos; APSD-03 separa consulta y texto. AIE-02 aporta evidencia pertinente; AIE-01 evalúa relaciones y afirmaciones por separado; AIE-03 conserva errores confirmados como regresiones.
+
+Si el reanálisis de B falla, permanece la versión anterior con advertencia. Si falta evidencia se expresa incertidumbre. Si falla la generación sigue accesible el resultado estructurado. Este recorrido define comportamiento esperado; las pruebas ejecutables corresponden a H2.
+
+H1-05 queda cubierto por las notas de ambos libros y su aplicación a estos contratos, reglas y criterios. H1-02 mantiene abiertos la cobertura SQL verificada, el adaptador real del parser, el esquema físico, las tecnologías y el detalle restante de arquitectura; H1-03 conserva la estimación de esfuerzo.

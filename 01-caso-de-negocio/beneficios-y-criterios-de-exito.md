@@ -4,7 +4,16 @@ Lectura 3 de 5 · [Índice del caso de negocio](README.md)
 
 [← Anterior: alcance y exclusiones](alcance-y-exclusiones.md) · [Siguiente: costos y esfuerzo →](costos-y-esfuerzo.md)
 
-**Estado: En revisión. Versión 0.1, 28/10/2026.** Criterios propuestos para evaluar el [caso de negocio](problema-y-contexto.md). No son métricas medidas ni umbrales aceptados. No se modifican los indicadores vacíos del Excel.
+**Estado: prioridades de valor definidas para H1-01; protocolo técnico por concretar en H1-02. Versión 1.0, 15/11/2026.** Los beneficios son hipótesis que se medirán en la evaluación, no resultados acreditados. No se modifican los indicadores vacíos del Excel.
+
+## Prioridades de valor
+
+1. Encontrar dependencias que hoy pasan por alto en la investigación manual.
+2. Reducir el tiempo necesario para reconstruir origen y consumidores.
+3. Reducir la dependencia de quienes conocen el código mediante evidencia compartida y reutilizable.
+
+La utilidad mínima es consultar origen y consumidores de tablas y columnas, recorrer upstream/downstream y localizar el soporte de cada relación. La IA complementa el reporte con recomendaciones y límites. La investigación puede ocupar horas o una jornada como referencia cualitativa actual; no hay una línea base medida ni un ahorro comprometido.
+
 
 | Hipótesis / criterio propuesto | Cómo comprobarlo | Meta |
 | --- | --- | --- |
@@ -15,7 +24,7 @@ Lectura 3 de 5 · [Índice del caso de negocio](README.md)
 | Comunicar incertidumbre. | Verificar que las referencias no resueltas se declaren y no aparezcan como ausencia de impacto. | Por acordar. |
 | Reducir esfuerzo de revisión. | Comparar tiempo y corrección en cinco casos; separar construcción/mantenimiento del catálogo de consulta de impacto. | Por acordar; beneficio hipotético. |
 
-Diez cambios y cinco comparaciones son compromisos originales, no umbrales de precisión. La evaluación también debe reportar fallos y límites aunque no confirme las hipótesis. Vincular mediciones al [plan](../04-evaluacion/plan-de-evaluacion.md).
+Diez cambios y cinco comparaciones son compromisos originales, no umbrales de precisión. La evaluación también debe reportar fallos y límites aunque no confirme las hipótesis. Vincular mediciones al [plan](../02-arquitectura/docs/validation.md).
 
 ## Hipótesis medibles
 
@@ -25,8 +34,9 @@ Diez cambios y cinco comparaciones son compromisos originales, no umbrales de pr
 | B-02 | Las relaciones y citas permiten investigar con menos omisiones. | Relaciones esperadas, omitidas y falsas; precisión y exhaustividad separadas por tabla, columna y condición. | Omisiones ocultas o falsas alarmas que aumenten el trabajo de revisión. |
 | B-03 | El conocimiento sigue siendo útil al cambiar un DAG. | Reanálisis, modificación y baja: relaciones correctas conservadas, retiradas o actualizadas. | Relaciones antiguas mostradas como vigentes o pérdida de aportes de otro DAG. |
 | B-04 | La explicación IA ayuda a interpretar sin alterar los hechos. | Correspondencia entre afirmación y evidencia; respuesta comprensible a qué revisar, por qué y con qué límite. | Afirmaciones sin soporte o tiempo de corrección mayor que la ayuda obtenida. |
+| B-05 | El reporte reduce la dependencia de memoria individual. | Comprobar si cada recorrido puede reconstruirse desde el reporte y sus referencias; registrar información adicional requerida. | Necesitar conocimiento no documentado para interpretar las relaciones. |
 
-Una relación correcta aporta evidencia técnica; no demuestra por sí sola un beneficio económico. La evaluación de claridad realizada por Óscar se registrará como autoevaluación, con sus límites, no como validación de usuarios independientes.
+Una relación correcta aporta evidencia técnica; no demuestra por sí sola un beneficio económico. La evaluación de claridad que realice se registrará como autoevaluación, no como validación independiente de otros usuarios.
 
 ## Criterios de aceptación propuestos para el corpus acotado
 

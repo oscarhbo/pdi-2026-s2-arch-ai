@@ -20,7 +20,7 @@ En cada documento encontrarás navegación al principio y al final. Puedes segui
 
 ## Cómo interpretar lo que lees
 
-El caso v0.1 está desarrollado para revisión. Distingue prioridades confirmadas, propuestas y beneficios que todavía deben medirse; no equivale a un MVP aprobado ni a resultados de un prototipo. El estado detallado se conserva en cada documento y en el [seguimiento de compromisos](../00-pdi/seguimiento-compromisos.md).
+El caso v1.0 queda completado para H1-01: usuarios, problema, prioridades de valor, entrega mediante reporte y límites funcionales definidos. La arquitectura, cobertura SQL y estimación continúan en H1-02 y H1-03. Los beneficios todavía deben medirse; el cierre documental no equivale a resultados del prototipo. El estado detallado se conserva en cada documento y en el [seguimiento de compromisos](../00-pdi/seguimiento-compromisos.md).
 
 Si vas a revisar el caso, comprueba primero que el problema y el usuario están bien definidos; después evalúa si el alcance y los criterios permiten demostrar valor. Las dudas de implementación se desarrollarán en arquitectura.
 

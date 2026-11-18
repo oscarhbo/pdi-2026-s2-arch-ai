@@ -1,8 +1,35 @@
 # Estado actual
 
-Última actualización: **10/11/2026**, zona America/Mexico_City. Sesión más reciente: consolidación de notas de AI Engineering.
+Última actualización: **17/11/2026**, zona America/Mexico_City. Sesión más reciente: depuración de documentos sustituidos tras integrar la arquitectura ArchFlow en el PDI.
+
+## Base vigente para retomar
+
+La [propuesta v1.0](../02-arquitectura/docs/revision-propuesta.md) queda integrada como borrador para revisión en este PDI. Conservo `02-arquitectura/README.md`, `docs/`, `adr/` y `diagrams/` como fuentes canónicas, conforme a [AGENTS.md](../AGENTS.md). La copia en ArchFlow queda como antecedente de transferencia.
+
+- Alcance vigente de la propuesta: web local obligatoria, carga manual de carpeta/DAG, linaje de tablas/columnas/STG/vistas y ventanas delimitadas, catálogo por revisiones, escenarios de impacto y descarga de resultados.
+- Base técnica propuesta: React/TypeScript y FastAPI, adaptador SQLGlot, SQLite, JSON/HTML y explicación IA opcional. Cinco ADR Propuesto; no se aceptan al trasladarlos.
+- Parser y dos DAGs de referencia ya inspeccionados en modo de consulta; sin acceso al framework como restricción conocida. La evidencia está en [revisión](../02-arquitectura/revision-parser-y-dags.md).
+- H1-02 y H1-03 conservan En curso. La elaboración del borrador está preparada para observaciones; no se declara aprobado ni Completado. H1-01, H1-04 y H1-05 mantienen sus cierres originales.
+- Próxima acción: revisar y ajustar alcance/decisiones en el PDI, sin construir ni prototipar. Estimación en H1-03, pruebas de implementación en H2 y comparaciones en H3.
+- Fechas originales sin cambios; la integración del 17/11 no equivale a reprogramación ni cumplimiento en fecha del hito del 15/11.
+
+La [integración](../02-arquitectura/integracion-archflow.md) registra mapa, procedencia y verificaciones. Las entradas siguientes reflejan las fechas indicadas; sus pendientes y tecnologías no seleccionadas describen el estado anterior, no reemplazan esta base vigente.
 
 ## Avance comprobado
+
+- 17/11/2026, depuración: retirados tres borradores de arquitectura y dos de evaluación, y eliminado el índice anterior duplicado de decisiones. Criterios útiles consolidados en el plan canónico y enlaces ajustados. Se conservan ADR, revisión simulada, fuentes y entregables con propósito propio. Sin cambios de estados, fechas o compromisos; próxima acción: revisar el borrador integrado.
+
+- 17/11/2026: integrada la propuesta 1.0 de ArchFlow como fuente canónica de arquitectura en el PDI. Conservados documentos previos y ADR originales; ajustadas navegación, reglas de edición y referencias de evaluación. Sin cambios a objetivos/Excel, estados de compromisos, aprobaciones o código del producto.
+
+## Historial previo a la integración
+
+- 15/11/2026: revisado ArchFlow 0.2.0 mediante lectura de metodología, guías, plantillas y código del inicializador/comprobador. Preparado el [contexto de entrada y transferencia](../02-arquitectura/contexto-para-archflow.md), con fuentes, decisiones vigentes, vacíos técnicos e instrucción de arranque. Próximo paso: iniciar la ficha con ese contexto y localizar parser y ejemplos para concretar cobertura. H1-02/H1-03 siguen En curso; no se creó un proyecto en ArchFlow, no se ejecutaron sus scripts ni se modificó su repositorio. La integración de salidas está documentada como propuesta, no realizada.
+
+- 15/11/2026: H1-01 Completado. [Caso v1.0](../01-caso-de-negocio/problema-y-contexto.md) con usuarios de ingeniería y análisis, consulta de origen/consumidores y diagnóstico limitado a linaje; reporte con DAG, archivo, SQL y cobertura. Prioridades: dependencias omitidas, tiempo y menor dependencia del conocimiento individual. Interfaz web opcional; sin logs ni estados de ejecución. Beneficios documentados como expectativas, no mediciones. H1-02 y H1-03 siguen En curso.
+
+- 15/11/2026: H1-05 Completado. Documentadas [diez aplicaciones de las lecturas](../05-aprendizaje/aplicacion-al-proyecto.md), integradas en arquitectura y ADR-002: contratos, publicación por DAG, separación de responsabilidades, evaluación, contexto, regresión y operación. Versión final redactada por instrucción de Óscar. Architecting AI Software Systems continúa como formación de H2 conforme a su aclaración. Sin implementación ni pruebas ejecutadas; H1-02 permanece En curso.
+
+- 15/11/2026: H1-04 Completado. Óscar confirma sus respuestas de la [revisión simulada](../02-arquitectura/decisiones/revision-simulada-hito-1.md) y decide conservar las observaciones de IA para considerarlas conforme avance el proyecto. Registrado el cierre v1.0; las recomendaciones no se convierten en decisiones técnicas aceptadas ni en condiciones adicionales de cierre. Los otros entregables mantienen sus estados.
 
 - 10/11/2026: documentado [AI Engineering](../05-aprendizaje/libros/ai-engineering.md) en un único archivo desde la transferencia de estudio: diez temas, ejemplos, preguntas, guía de decisiones, glosario y caso de linaje. Aplicaciones AIE-01 a AIE-03 propuestas, enlazadas desde aprendizaje. H1-05 conserva estado En curso; no se acreditan lectura íntegra, evaluación aprobada ni implementación por generar las notas.
 
@@ -29,41 +56,41 @@
 
 - Estructura documental creada el 25/10; fuentes originales conservadas. [Fuentes y aclaraciones](fuentes/README.md).
 - En la sesión de incorporación se leyó el contexto transferido y se revisaron los documentos del repositorio. Su archivo histórico ya no está disponible en fuentes. Óscar autorizó adaptar documentación manteniendo estructura, AGENTS.md y compromisos.
-- Actualizados [caso](../01-caso-de-negocio/problema-y-contexto.md), [alcance](../01-caso-de-negocio/alcance-y-exclusiones.md), [arquitectura conceptual](../02-arquitectura/arquitectura-de-solucion.md), evaluación y plantillas relacionadas. Esto no completa los entregables.
+- Actualizados [caso](../01-caso-de-negocio/problema-y-contexto.md), [alcance](../01-caso-de-negocio/alcance-y-exclusiones.md), [arquitectura conceptual](../02-arquitectura/docs/sad.md), evaluación y plantillas relacionadas. Esto no completa los entregables.
 - Registrada la prioridad comunicada por el usuario en [ADR-001](../02-arquitectura/decisiones/ADR-001-prioridades-de-linaje.md): descubrimiento incremental y linaje de tablas/columnas, ambos prioridad 1.
 - Git local sin commits. No hay implementación ni parser entregado en este repositorio; su existencia fue declarada por el usuario, sin inspección de capacidades.
 
-## Contexto vigente para retomar
+## Contexto anterior para retomar — hasta el 15/11/2026
 
 El problema principal es la falta de trazabilidad entre procesos, tablas y columnas. Dos capacidades: descubrir linaje por DAG y acumular conocimiento; después consultar impacto entre DAGs. Entorno de referencia declarado: GCP, GCS/Parquet, Hive Metastore, Spark/Dataproc y Airflow con Spark SQL embebido en YAML. No implica desplegar ese stack.
 
 Caso: DAG 1 lee raw.ventas/raw.clientes y produce curated.ventas, con posibles STG; DAGs 2/3 consumen esa tabla. Eliminar raw.ventas.precio podría afectar el cálculo de total. La propagación a columnas de los consumidores necesita evidencia específica; consumo de tabla no demuestra impacto en todas sus columnas.
 
-## Trabajo en curso
+## Trabajo en curso registrado antes de la integración
 
-Caso v0.1 En revisión; alcance funcional, costos, propuesta de piloto, planificación y arquitectura conceptual En curso. [Entregables](seguimiento-compromisos.md). Tablas y columnas ya son prioridad confirmada; versión y patrones Spark SQL siguen abiertos. TOGAF está documentado y su finalización fue confirmada por Óscar. A Philosophy of Software Design dispone de notas del recorrido de estudio aportado; H1-05 está En curso. No hay pruebas, métricas ni grabaciones acreditadas, ni constancias de los cursos comprometidos en el Excel. Hay una simulación de una conversación entre la IA y Óscar para revisión de dudas del caso de negocio, pendiente de decisiones definitivas.  Los criterios propuestos son parte del borrador, no acuerdos ni resultados.
+Caso v1.0 Completado para H1-01 y alcance funcional definido; costos, propuesta de piloto, planificación y detalle de arquitectura En curso. [Entregables](seguimiento-compromisos.md). Tablas y columnas ya son prioridad confirmada; versión y patrones Spark SQL siguen abiertos. TOGAF está documentado y su finalización fue confirmada por Óscar. A Philosophy of Software Design dispone de notas del recorrido de estudio aportado; H1-05 está Completado por notas y aplicación documental al diseño. No hay pruebas, métricas ni grabaciones acreditadas, ni constancias de los cursos comprometidos en el Excel. H1-04 está Completado: conversación, respuestas, reflexión y tratamiento de las observaciones cerrados por Óscar. Los criterios técnicos propuestos siguen siendo parte del borrador, no acuerdos ni resultados.
 
-## Decisiones pendientes
+## Decisiones pendientes registradas antes de la integración
 
 Cobertura exacta del MVP y de vistas del PDI; convenciones de DAG/YAML; esquemas y parámetros; capacidades del parser; modelo de relaciones de valor/condición; ámbito y tratamiento de STG; identificación de targets; catálogo/persistencia; versionado, actualización y baja de DAGs; consultas de impacto; aporte específico de IA; interfaz y activación del análisis; tecnologías; criterios y metas de calidad; estimación de esfuerzo y presupuesto API de USD 20 propuesto, sin gasto autorizado.
 
-El flujo conceptual, catálogo persistente, separación análisis/IA y arranque manual siguen siendo propuestas. Verificado/Inferido/Desconocido distingue sustento de una relación; no demuestra ejecución ni ausencia de impacto fuera del catálogo.
+El catálogo físico y arranque manual siguen por concretar. La separación análisis/IA y las reglas de actualización se definen en las aplicaciones de las lecturas y ADR-002. Verificado/Inferido/Desconocido distingue sustento de una relación; no demuestra ejecución ni ausencia de impacto fuera del catálogo.
 
-## Bloqueos y dependencias
+## Bloqueos y dependencias registrados antes de la integración
 
 Faltan código/ruta del parser y ejemplos representativos de DAG, configuración y YAML. Esto impide verificar reutilización y convenciones, pero permite continuar la delimitación funcional. No reemplazar el parser ni inventar estructura del framework. No hay dependencia de revisión humana externa para cerrar el proyecto. Fechas ambiguas del Excel y referencia bibliográfica siguen en [fuentes](fuentes/README.md).
 
-## Próxima acción concreta
+## Próximas acciones registradas antes de la integración
 
-Para aplicar AI Engineering, concretar AIE-01: preparar un caso sintético con relaciones esperadas de tablas, columnas y condiciones y una rúbrica para evaluar la explicación por separado. Después definir el contexto mínimo con evidencia y límites de AIE-02, aprovechando los contratos propuestos en APSD-01 y APSD-03. Registrar aceptación antes de trasladar estas propuestas al diseño como decisiones.
+Continuar H1-02 con un ejemplo sintético que concrete los contratos ya documentados en APSD-01 y AIE-02. Localizar e inspeccionar el parser para fijar cobertura y adaptador; preparar los esperados de AIE-01 para las pruebas de H2.
 
-Revisar y adaptar las respuestas RS-08 a RS-13 y registrar las decisiones de la [simulación H1-04](../02-arquitectura/decisiones/revision-simulada-hito-1.md). Después incorporar al diseño los contratos y la política de actualización/evidencia elegidos, enlazar los ajustes y completar los contrastes técnicos pertinentes. Las recomendaciones continúan como propuestas.
+Continuar H1-02 concretando contratos y política de actualización/evidencia. Considerar las observaciones de la [simulación H1-04 ya cerrada](../02-arquitectura/decisiones/revision-simulada-hito-1.md) cuando sean pertinentes y registrar las decisiones técnicas que se adopten. Las respuestas de Óscar se conservan; no hay tarea pendiente de reformularlas.
 
-Para aplicar las notas del libro, desarrollar el contrato candidato APSD-01 con un DAG sintético: entradas, salidas, evidencia, cobertura y errores. Después contrastarlo con las capacidades reales del parser y comparar las alternativas de APSD-02. Registrar aceptación explícita antes de convertir propuestas en decisiones.
+Las aplicaciones de las lecturas están documentadas en su versión vigente. El trabajo siguiente concreta el mecanismo de persistencia, los esquemas y la cobertura SQL sin reabrir H1-05.
 
 Para aprovechar el aprendizaje documentado, contrastar las propuestas de aplicación de TOGAF con el caso de negocio y registrar únicamente las decisiones expresamente aceptadas. La documentación del curso queda terminada.
 
-Contrastar el caso v0.1 y revisar RF-01 a RF-05 y CA-01 a CA-06: utilidad del reporte, evidencia y límites necesarios. Después, con parser y artefactos representativos, fijar patrones Spark SQL/vistas/STG, estimar esfuerzo y resolver reutilización/adaptación/desarrollo. Conservar tablas y columnas; controlar complejidad acotando patrones. Registrar qué criterios se aceptan o ajustan antes de cerrar el alcance. La revisión simulada del hito dispone ahora de un borrador completo independiente del caso; faltan decisiones definitivas y ajustes sustentados para cerrarla.
+Continuar H1-02 con parser y artefactos representativos para fijar patrones Spark SQL, vistas y STG, y definir el adaptador y la persistencia. Concretar el protocolo técnico CA-01 a CA-06 antes de medir. En H1-03, estimar esfuerzo y capacidad. H1-01, H1-04 y H1-05 están completados; no necesitan reabrirse para realizar ese trabajo.
 
 ## Verificación documental previa
 
