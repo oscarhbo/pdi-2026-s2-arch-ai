@@ -5,7 +5,7 @@ Fecha-revisada: 2026-11-17
 Estado: Propuesta lista para revisión  
 Versión: 1.0
 
-En este documento concreto el diseño lógico de H1-02 con las doce secciones arc42. Mantengo los criterios vigentes del PDI; los contratos detallados de este documento son PROPUESTOS. Fuentes: [ficha](../README.md), [inspección](../revision-parser-y-dags.md) y [requisitos](requirements.md).
+En este documento concreto el diseño lógico de H1-02 con las doce secciones arc42. Mantengo los criterios vigentes del PDI; los contratos detallados de este documento son PROPUESTOS. Fuentes: [ficha](../README.md), [inspección](../../00-pdi/fuentes/arquitectura/revision-parser-y-dags.md) y [requisitos](requirements.md).
 
 ## Control documental
 
@@ -178,7 +178,7 @@ La prioridad es evidencia rastreable y publicación consistente. Escenarios y me
 | Pérdida o crecimiento de datos locales | Historial sin poda y backup incompleto de SQLite/archivos | Workspace delimitado, límites de entrada, backup con manifiesto; restauración prevista | Óscar; impacto alto propuesto; capacidad y recuperación por medir en H2 |
 | Grafo difícil de interpretar | Densidad de nodos y diferencias entre representación y resultado | Vista acotada, límites visibles, tabla y evidencia de la misma revisión | Óscar; impacto medio propuesto; usabilidad por evaluar en H2 |
 
-La inspección ya identificó defectos en el extractor; son hallazgos observados, no riesgos hipotéticos. No se atribuye su corrección a este diseño. Seguimiento: [informe](../revision-parser-y-dags.md) y [log](validation-log.md).
+La inspección ya identificó defectos en el extractor; son hallazgos observados, no riesgos hipotéticos. No se atribuye su corrección a este diseño. Seguimiento: [informe](../../00-pdi/fuentes/arquitectura/revision-parser-y-dags.md) y [log](validation-log.md).
 
 ## 12. Glosario
 

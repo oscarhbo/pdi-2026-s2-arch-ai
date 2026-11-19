@@ -11,4 +11,4 @@ Antes de programar: definir [caso y alcance](../01-caso-de-negocio/alcance-y-exc
 
 Al implementar, completar requisitos, instalación, ejecución reproducible, ejemplo de entrada/salida, pruebas y limitaciones. Spark SQL es el dialecto de referencia; el perfil de patrones y el stack propuesto están en la arquitectura integrada. Su selección documental no acredita implementación.
 
-La [inspección del parser y de dos DAGs](../02-arquitectura/revision-parser-y-dags.md) ya está documentada. La implementación futura partirá de sus hallazgos y del [diseño técnico](../02-arquitectura/docs/diseno-tecnico.md), sin atribuir al parser capacidades aún no comprobadas.
+La [inspección del parser y de dos DAGs](../00-pdi/fuentes/arquitectura/revision-parser-y-dags.md) ya está documentada. La implementación futura partirá de sus hallazgos y del [diseño técnico](../02-arquitectura/docs/diseno-tecnico.md), sin atribuir al parser capacidades aún no comprobadas.

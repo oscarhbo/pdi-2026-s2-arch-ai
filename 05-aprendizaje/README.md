@@ -1,6 +1,6 @@
 # Aprendizaje
 
-**Estado: Con aprendizaje documentado.** A Philosophy of Software Design cuenta con notas consolidadas de 22 temas a partir de la transferencia de estudio. Curso TOGAF completado según confirmación de Óscar el 28/10/2026; notas y enlace al certificado de finalización de Udemy disponibles en la ficha del curso. No se registra certificación profesional de TOGAF ni se da por completada la formación comprometida en el Excel.
+**Estado: Con aprendizaje documentado.** A Philosophy of Software Design cuenta con notas consolidadas de 22 temas a partir de la transferencia de estudio. Curso TOGAF completado según confirmación de Óscar el 28/10/2026; notas y enlace al certificado de finalización de Udemy disponibles en la ficha del curso.
 
 | Recurso previsto | Aplicación por explorar | Ubicación |
 | --- | --- | --- |

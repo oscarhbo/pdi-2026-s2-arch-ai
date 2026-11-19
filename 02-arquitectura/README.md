@@ -9,9 +9,11 @@ Fecha-revisada: 2026-11-17
 
 En esta ficha conservo el contexto, las fuentes y el progreso de H1-02. Desde el 17/11/2026, `02-arquitectura/` de este PDI es la ubicación canónica de la propuesta y conserva la estructura documental de ArchFlow 0.2.0. La entrega elaborada en ArchFlow queda como antecedente de transferencia. Esta ficha no acredita aprobación arquitectónica ni ejecución del prototipo.
 
-[Portada del PDI](../README.md) · [Objetivos](../00-pdi/Objetivos_PDI_2026.md) · [Estado actual](../00-pdi/estado-actual.md) · [Integración y mapa documental](integracion-archflow.md)
+[Portada del PDI](../README.md) · [Objetivos](../00-pdi/Objetivos_PDI_2026.md) · [Estado actual](../00-pdi/estado-actual.md) · [Procedencia de la transferencia](docs/validation-log.md#procedencia-transferencia)
 
 Las restricciones de solo lectura de SRC-012 a SRC-020 describen la elaboración original. La integración autorizada en SRC-021 permite actualizar la documentación del PDI; no cambia las restricciones sobre datos productivos, gasto, ejecución o publicación.
+
+Los manifiestos de procedencia y el informe de inspección se conservan como [evidencias de referencia](../00-pdi/fuentes/arquitectura/README.md), fuera de la ruta principal de lectura del diseño.
 
 ## Entrada para revisar la propuesta
 
@@ -68,7 +70,7 @@ Raíz de las fuentes del PDI: `C:/Oscar/Repositorios/pdi-2026-s2-arch-ai`, este 
 ## SRC-001 — Contexto de transferencia
 
 <a id="SRC-001"></a>
-Ubicación: `02-arquitectura/contexto-para-archflow.md`. Fecha documental: 15/11/2026. Uso: alcance de esta sesión, fuentes, vacíos y propuesta de integración futura.
+Fecha documental original: 15/11/2026. Insumo de arranque utilizado para elaborar la arquitectura. Su contexto útil está consolidado en esta ficha, el caso de negocio y las fuentes SRC-002 a SRC-012. La instrucción de iniciar el proyecto y el mapa de traslado inicial dejaron de aplicar tras la integración; conservo este ID como procedencia histórica, no como requisito vigente.
 
 ## SRC-002 — Estado y seguimiento
 
@@ -128,7 +130,7 @@ Procedencia: conversación del 15/11/2026. Uso autorizado: iniciar `linaje-impac
 ## SRC-013 — Analizador existente
 
 <a id="SRC-013"></a>
-Ubicación externa: `C:/Oscar/Walmart/dag_analyzer`. Lectura autorizada por la conversación del 16/11/2026. Uso: revisar código, documentación y resultados guardados para determinar capacidades y brechas. Repositorio conservado sin cambios; no se ejecuta su exportador sobre las fuentes. Evidencia y límites en la [revisión](revision-parser-y-dags.md).
+Ubicación externa: `C:/Oscar/Walmart/dag_analyzer`. Lectura autorizada por la conversación del 16/11/2026. Uso: revisar código, documentación y resultados guardados para determinar capacidades y brechas. Repositorio conservado sin cambios; no se ejecuta su exportador sobre las fuentes. Evidencia y límites en la [revisión](../00-pdi/fuentes/arquitectura/revision-parser-y-dags.md).
 
 ## SRC-014 — Primer DAG de referencia
 
@@ -168,7 +170,7 @@ Procedencia: conversación del 16/11/2026. Confirmo que el trabajo actual es arq
 ## SRC-021 — Integración canónica de ArchFlow en el PDI
 
 <a id="SRC-021"></a>
-Procedencia: conversación del 17/11/2026. Decido que la arquitectura del PDI adopte los documentos y la organización de ArchFlow, en lugar de repartirlos en la estructura anterior. Incluye ajustar AGENTS.md para conservar la nueva organización. La entrega fuente es la propuesta 1.0, con revisión editorial del 17/11/2026; sus huellas y equivalencias se conservan en [integración](integracion-archflow.md). La integración no aprueba ADR ni declara H1-02 Completado.
+Procedencia: conversación del 17/11/2026. Decido que la arquitectura del PDI adopte los documentos y la organización de ArchFlow, en lugar de repartirlos en la estructura anterior. Incluye ajustar AGENTS.md para conservar la nueva organización. La entrega fuente es la propuesta 1.0, con revisión editorial del 17/11/2026; sus huellas y equivalencias se conservan en [integración](docs/validation-log.md#procedencia-transferencia). La integración no aprueba ADR ni declara H1-02 Completado.
 
 ## Entregables aplicables
  
@@ -177,7 +179,7 @@ La ejecución local/manual y la inclusión de ventanas están confirmadas en [SR
 | Entregable | Aplica y motivo | Ruta cuando exista | Responsable | Estado |
 |---|---|---|---|---|
 | Ficha | Contexto y reanudación de H1-02 | README.md | Óscar Hernández Barrón | Borrador |
-| Revisión del analizador y fuentes | Evidencia de capacidades, brechas y convenciones para decidir reutilización | [Revisión](revision-parser-y-dags.md) y [huellas](fuentes-inspeccionadas.json) | Óscar Hernández Barrón | Borrador de análisis |
+| Revisión del analizador y fuentes | Evidencia de capacidades, brechas y convenciones para decidir reutilización | [Revisión](../00-pdi/fuentes/arquitectura/revision-parser-y-dags.md) y [huellas](../00-pdi/fuentes/arquitectura/fuentes-inspeccionadas.json) | Óscar Hernández Barrón | Borrador de análisis |
 | SAD | Estrategia, bloques y contratos lógicos sin framework | [docs/sad.md](docs/sad.md) | Óscar Hernández Barrón | Propuesta 1.0 para revisión |
 | Requisitos | Correspondencia con RF/CA y escenarios de calidad | [docs/requirements.md](docs/requirements.md) | Óscar Hernández Barrón | Propuestos |
 | Definición de validación | Métodos y criterios antes de ejecutar | [docs/validation.md](docs/validation.md) | Óscar Hernández Barrón | Planificada |
@@ -205,13 +207,13 @@ La carpeta `02-arquitectura/` reúne la arquitectura vigente del proyecto. Su ca
 | P6. DDL/esquema ordenado de la tabla final | PENDIENTE; no bloquea diseño lógico | Columnas destino, particiones y escritura posicional | Óscar / antes de validar mapeos | No aparece en las carpetas de ejemplo. Continuar declarando mapeos no resueltos; preparar esquema propio explícito para el corpus sintético, sin atribuirlo al entorno real. |
 | P7. Entorno/versiones del analizador | PENDIENTE; no bloquea contratos | Reproducibilidad y pruebas SQL | Óscar / antes de pruebas funcionales | Sin manifiesto de dependencias. Definir un entorno de evaluación identificado cuando corresponda; no afirmar que reproduce el original. No se instalaron paquetes. |
 
-La [revisión del analizador](revision-parser-y-dags.md) identifica capacidades observadas, defectos comprobados de forma aislada y resultados históricos. La adaptación con SQLGlot ya está seleccionada explícitamente en ADR-0002; disponer del código no equivale a acreditar cobertura.
+La [revisión del analizador](../00-pdi/fuentes/arquitectura/revision-parser-y-dags.md) identifica capacidades observadas, defectos comprobados de forma aislada y resultados históricos. La adaptación con SQLGlot ya está seleccionada explícitamente en ADR-0002; disponer del código no equivale a acreditar cobertura.
 
 ## Relación con implementación
 
-Repositorio del analizador: `C:/Oscar/Walmart/dag_analyzer`; módulos en `analyzer_code/`. HEAD observado: `9b6f0f22867a19da40db969e18e265723267ac56`; no se afirma igualdad del árbol de trabajo con ese commit. El [manifiesto](fuentes-inspeccionadas.json) conserva hashes del contenido inventariado. Es implementación previa de extracción, no del prototipo completo de H2. El PDI conserva la versión documental canónica; los repositorios del parser y los DAGs permanecen sin cambios.
+Repositorio del analizador: `C:/Oscar/Walmart/dag_analyzer`; módulos en `analyzer_code/`. HEAD observado: `9b6f0f22867a19da40db969e18e265723267ac56`; no se afirma igualdad del árbol de trabajo con ese commit. El [manifiesto](../00-pdi/fuentes/arquitectura/fuentes-inspeccionadas.json) conserva hashes del contenido inventariado. Es implementación previa de extracción, no del prototipo completo de H2. El PDI conserva la versión documental canónica; los repositorios del parser y los DAGs permanecen sin cambios.
 
-La transferencia al PDI queda registrada en [integración](integracion-archflow.md). Conservo IDs de ArchFlow y ADR históricos de tres dígitos como registros distintos; las revisiones futuras se realizan aquí, sin mantener una segunda arquitectura editable.
+La transferencia al PDI queda registrada en [integración](docs/validation-log.md#procedencia-transferencia). Conservo IDs de ArchFlow y ADR históricos de tres dígitos como registros distintos; las revisiones futuras se realizan aquí, sin mantener una segunda arquitectura editable.
 
 ## Progreso de trabajo
 

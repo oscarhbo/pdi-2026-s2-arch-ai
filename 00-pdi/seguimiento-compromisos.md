@@ -1,6 +1,6 @@
 # Seguimiento de compromisos
 
-Última actualización: 17/11/2026. Responsable: Óscar Hernández Barrón. Fuente: [Excel y aclaraciones](fuentes/README.md), hoja Mi PDI Semestre 2 2026 salvo indicación. No se asignan porcentajes a partir de celdas vacías.
+Última actualización: 18/11/2026. Responsable: Óscar Hernández Barrón. Fuente: [Excel y aclaraciones](fuentes/README.md), hoja Mi PDI Semestre 2 2026 salvo indicación. No se asignan porcentajes a partir de celdas vacías.
 
 Estados permitidos: Pendiente, En curso, Bloqueado, En revisión y Completado. Completado requiere entregable y evidencia verificable; En revisión supone un entregable preparado para contrastar; Bloqueado exige impedimento concreto. Los enlaces de plantilla son destinos previstos, no evidencia de cumplimiento.
 
@@ -27,12 +27,16 @@ No hay reprogramaciones aprobadas. Ninguno de los tres hitos profesionales ha ve
 
 ## Registro de cambios
 
-- 17/11/2026, depuración documental: elimino cinco documentos sustituidos y el índice anterior repetido de decisiones. Consolido criterios de medición y enlaces en los documentos canónicos. Mantengo las 16 filas, fechas y estados; esta limpieza no cierra H1-02 ni acredita resultados. Detalle en el [registro de integración](../02-arquitectura/integracion-archflow.md).
+- 18/11/2026, organización de evidencias: traslado manifiestos e inspección previa a [fuentes de arquitectura](fuentes/arquitectura/README.md), manteniendo una única copia y referencias desde el diseño. Conservo hashes de origen y destinos históricos; el manifiesto distingue la ubicación actual. Sin cambios en entregables, fechas o estados.
 
-- 17/11/2026: integro la propuesta de arquitectura v1.0 en `02-arquitectura/` con estructura ArchFlow y ajusto AGENTS.md para mantenerla. El [registro de integración](../02-arquitectura/integracion-archflow.md) conserva procedencia e historial. Se actualiza la evidencia de H1-02, sin cambiar su estado En curso ni las 16 filas de compromisos en sus IDs, entregables y fechas. La web obligatoria es una ampliación de arquitectura posterior al alcance original de H1-01, no una reescritura de su cierre. Sin prototipo, resultados funcionales ni gasto.
+- 18/11/2026, depuración de auxiliares: elimino el insumo de arranque consumido y la guía separada de integración. Su información útil queda en la ficha y el log de validación; conservo los manifiestos de transferencia/fuentes y la revisión del parser como evidencia. Ajusto referencias sin modificar las 16 filas de compromisos ni sus fechas y estados.
+
+- 17/11/2026, depuración documental: elimino cinco documentos sustituidos y el índice anterior repetido de decisiones. Consolido criterios de medición y enlaces en los documentos canónicos. Mantengo las 16 filas, fechas y estados; esta limpieza no cierra H1-02 ni acredita resultados. Detalle en el [registro de integración](../02-arquitectura/docs/validation-log.md#procedencia-transferencia).
+
+- 17/11/2026: integro la propuesta de arquitectura v1.0 en `02-arquitectura/` con estructura ArchFlow y ajusto AGENTS.md para mantenerla. El [registro de integración](../02-arquitectura/docs/validation-log.md#procedencia-transferencia) conserva procedencia e historial. Se actualiza la evidencia de H1-02, sin cambiar su estado En curso ni las 16 filas de compromisos en sus IDs, entregables y fechas. La web obligatoria es una ampliación de arquitectura posterior al alcance original de H1-01, no una reescritura de su cierre. Sin prototipo, resultados funcionales ni gasto.
 
 
-- 15/11/2026, preparación de arquitectura con ArchFlow: inspeccionado el framework local 0.2.0 y elaborado el [contexto para iniciar y transferir resultados](../02-arquitectura/contexto-para-archflow.md). Contiene fuentes del caso, alcance, contratos vigentes, preguntas técnicas y correspondencia de entregables. H1-02 continúa En curso; preparar insumos no equivale a generar o aprobar el diseño. Todos los estados y fechas se conservan. Próximo paso: iniciar la ficha y revisar parser/artefactos representativos.
+- 15/11/2026, preparación de arquitectura con ArchFlow: inspeccionado el framework local 0.2.0 y elaborado el insumo de arranque, posteriormente consolidado en la ficha y el [registro de transferencia](../02-arquitectura/docs/validation-log.md#procedencia-transferencia). Contiene fuentes del caso, alcance, contratos vigentes, preguntas técnicas y correspondencia de entregables. H1-02 continúa En curso; preparar insumos no equivale a generar o aprobar el diseño. Todos los estados y fechas se conservan. Próximo paso: iniciar la ficha y revisar parser/artefactos representativos.
 
 - 15/11/2026, cierre de H1-01: definido el caso para ingenieros y analistas que consultan linaje, investigan problemas por dependencias o evalúan cambios. Prioridad: dependencias omitidas, tiempo y autonomía de investigación. Reporte como entrega del MVP, evidencia y límites obligatorios, web opcional y exclusión de logs y estados de ejecución. Documentadas ventajas frente a búsqueda y documentación manual; beneficios aún sin medir. H1-01 pasa a Completado, sin cambiar fechas ni los demás estados.
 

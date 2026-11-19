@@ -11,7 +11,7 @@ Sustituido-por: No aplica
 
 Concreto la representación de relaciones y la elegibilidad de publicación con independencia del almacenamiento, concretado posteriormente en ADR-0003. Este ID pertenece a ArchFlow; no renumera ni sustituye el ADR-001 del PDI.
 
-Requisitos: [FR-002](../docs/requirements.md#FR-002), [FR-003](../docs/requirements.md#FR-003), [NFR-001](../docs/requirements.md#NFR-001), [NFR-002](../docs/requirements.md#NFR-002). Elementos: [análisis](../docs/sad.md#EL-001), [catálogo](../docs/sad.md#EL-002) y [consulta](../docs/sad.md#EL-003). Fuentes: [criterios vigentes](../README.md#SRC-008), [inspección](../revision-parser-y-dags.md), [recorrido propuesto](../docs/recorrido-sintetico.md).
+Requisitos: [FR-002](../docs/requirements.md#FR-002), [FR-003](../docs/requirements.md#FR-003), [NFR-001](../docs/requirements.md#NFR-001), [NFR-002](../docs/requirements.md#NFR-002). Elementos: [análisis](../docs/sad.md#EL-001), [catálogo](../docs/sad.md#EL-002) y [consulta](../docs/sad.md#EL-003). Fuentes: [criterios vigentes](../README.md#SRC-008), [inspección](../../00-pdi/fuentes/arquitectura/revision-parser-y-dags.md), [recorrido propuesto](../docs/recorrido-sintetico.md).
 
 ### Contexto y problema
 

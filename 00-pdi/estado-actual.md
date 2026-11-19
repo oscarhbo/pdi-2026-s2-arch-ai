@@ -1,6 +1,6 @@
 # Estado actual
 
-Última actualización: **17/11/2026**, zona America/Mexico_City. Sesión más reciente: depuración de documentos sustituidos tras integrar la arquitectura ArchFlow en el PDI.
+Última actualización: **18/11/2026**, zona America/Mexico_City. Sesión más reciente: separación de evidencias y documentación principal de arquitectura.
 
 ## Base vigente para retomar
 
@@ -8,14 +8,18 @@ La [propuesta v1.0](../02-arquitectura/docs/revision-propuesta.md) queda integra
 
 - Alcance vigente de la propuesta: web local obligatoria, carga manual de carpeta/DAG, linaje de tablas/columnas/STG/vistas y ventanas delimitadas, catálogo por revisiones, escenarios de impacto y descarga de resultados.
 - Base técnica propuesta: React/TypeScript y FastAPI, adaptador SQLGlot, SQLite, JSON/HTML y explicación IA opcional. Cinco ADR Propuesto; no se aceptan al trasladarlos.
-- Parser y dos DAGs de referencia ya inspeccionados en modo de consulta; sin acceso al framework como restricción conocida. La evidencia está en [revisión](../02-arquitectura/revision-parser-y-dags.md).
+- Parser y dos DAGs de referencia ya inspeccionados en modo de consulta; sin acceso al framework como restricción conocida. La evidencia está en [revisión](fuentes/arquitectura/revision-parser-y-dags.md).
 - H1-02 y H1-03 conservan En curso. La elaboración del borrador está preparada para observaciones; no se declara aprobado ni Completado. H1-01, H1-04 y H1-05 mantienen sus cierres originales.
 - Próxima acción: revisar y ajustar alcance/decisiones en el PDI, sin construir ni prototipar. Estimación en H1-03, pruebas de implementación en H2 y comparaciones en H3.
 - Fechas originales sin cambios; la integración del 17/11 no equivale a reprogramación ni cumplimiento en fecha del hito del 15/11.
 
-La [integración](../02-arquitectura/integracion-archflow.md) registra mapa, procedencia y verificaciones. Las entradas siguientes reflejan las fechas indicadas; sus pendientes y tecnologías no seleccionadas describen el estado anterior, no reemplazan esta base vigente.
+La [integración](../02-arquitectura/docs/validation-log.md#procedencia-transferencia) registra mapa, procedencia y verificaciones. Las entradas siguientes reflejan las fechas indicadas; sus pendientes y tecnologías no seleccionadas describen el estado anterior, no reemplazan esta base vigente.
 
 ## Avance comprobado
+
+- 18/11/2026: reubicados los manifiestos de entrega/fuentes y el informe del parser en [fuentes de arquitectura](fuentes/arquitectura/README.md). Se mantienen accesibles para trazabilidad y adaptación futura; ya no ocupan la raíz de arquitectura. Ajustadas referencias y conservados hashes originales, estados y fechas de compromisos. Próxima acción: revisar la propuesta canónica y estimar H1-03.
+
+- 18/11/2026: retirados el insumo de arranque ya consumido y la guía separada de integración. Consolidadas procedencia, equivalencias y verificaciones de transferencia en el log canónico; conservados los manifiestos de hashes y la inspección del parser por aportar evidencia propia. Referencias actualizadas, sin cambiar estados, fechas de compromisos ni decisiones. Próxima acción: continuar la revisión de la propuesta y la estimación H1-03.
 
 - 17/11/2026, depuración: retirados tres borradores de arquitectura y dos de evaluación, y eliminado el índice anterior duplicado de decisiones. Criterios útiles consolidados en el plan canónico y enlaces ajustados. Se conservan ADR, revisión simulada, fuentes y entregables con propósito propio. Sin cambios de estados, fechas o compromisos; próxima acción: revisar el borrador integrado.
 
@@ -23,7 +27,7 @@ La [integración](../02-arquitectura/integracion-archflow.md) registra mapa, pro
 
 ## Historial previo a la integración
 
-- 15/11/2026: revisado ArchFlow 0.2.0 mediante lectura de metodología, guías, plantillas y código del inicializador/comprobador. Preparado el [contexto de entrada y transferencia](../02-arquitectura/contexto-para-archflow.md), con fuentes, decisiones vigentes, vacíos técnicos e instrucción de arranque. Próximo paso: iniciar la ficha con ese contexto y localizar parser y ejemplos para concretar cobertura. H1-02/H1-03 siguen En curso; no se creó un proyecto en ArchFlow, no se ejecutaron sus scripts ni se modificó su repositorio. La integración de salidas está documentada como propuesta, no realizada.
+- 15/11/2026: revisado ArchFlow 0.2.0 mediante lectura de metodología, guías, plantillas y código del inicializador/comprobador. Preparado el insumo de arranque, posteriormente consolidado en la ficha y el [registro de transferencia](../02-arquitectura/docs/validation-log.md#procedencia-transferencia), con fuentes, decisiones vigentes, vacíos técnicos e instrucción de arranque. Próximo paso: iniciar la ficha con ese contexto y localizar parser y ejemplos para concretar cobertura. H1-02/H1-03 siguen En curso; no se creó un proyecto en ArchFlow, no se ejecutaron sus scripts ni se modificó su repositorio. La integración de salidas está documentada como propuesta, no realizada.
 
 - 15/11/2026: H1-01 Completado. [Caso v1.0](../01-caso-de-negocio/problema-y-contexto.md) con usuarios de ingeniería y análisis, consulta de origen/consumidores y diagnóstico limitado a linaje; reporte con DAG, archivo, SQL y cobertura. Prioridades: dependencias omitidas, tiempo y menor dependencia del conocimiento individual. Interfaz web opcional; sin logs ni estados de ejecución. Beneficios documentados como expectativas, no mediciones. H1-02 y H1-03 siguen En curso.
 

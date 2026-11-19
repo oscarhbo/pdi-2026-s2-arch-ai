@@ -7,7 +7,7 @@ Estado: Lista para revisión y ajustes; no aprobada
 
 ## Ubicación canónica
 
-Reviso y ajusto esta propuesta en el PDI, dentro de `02-arquitectura/`, con estructura ArchFlow. La transferencia del 17/11/2026 y sus reglas de continuidad están en [integración](../integracion-archflow.md). Las versiones e IDs de diseño se conservan; no hay aceptación automática por la transferencia.
+Reviso y ajusto esta propuesta en el PDI, dentro de `02-arquitectura/`, con estructura ArchFlow. La transferencia del 17/11/2026 y sus reglas de continuidad están en [integración](validation-log.md#procedencia-transferencia). Las versiones e IDs de diseño se conservan; no hay aceptación automática por la transferencia.
 
 ## Propósito de esta entrega
 

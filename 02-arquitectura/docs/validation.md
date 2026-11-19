@@ -21,7 +21,7 @@ La revisión formal de contenido y legibilidad de diagramas forma parte de acept
 
 El [recorrido sintético 0.1](recorrido-sintetico.md) fija esperados de diseño para el núcleo A/B/C y la variante de ventanas. Está preparado como especificación; los fixtures y ejecuciones aún no existen. Incluir ventanas y operar localmente está confirmado en [SRC-017](../README.md#SRC-017). No se interpreta la inclusión como soporte universal del dialecto.
 
-Priorizar extracción sin ejecución, corrección de relaciones, actualización y fidelidad de explicación. Mantener evidencia por componente y tarea completa. Las inspecciones previas viven en el [informe](../revision-parser-y-dags.md); no se presentan como ejecución retrospectiva de estas validaciones. Las pruebas usarán corpus sintético creado y versionado, sin reconstruir ni ejecutar el framework empresarial.
+Priorizar extracción sin ejecución, corrección de relaciones, actualización y fidelidad de explicación. Mantener evidencia por componente y tarea completa. Las inspecciones previas viven en el [informe](../../00-pdi/fuentes/arquitectura/revision-parser-y-dags.md); no se presentan como ejecución retrospectiva de estas validaciones. Las pruebas usarán corpus sintético creado y versionado, sin reconstruir ni ejecutar el framework empresarial.
 
 Pruebas de carga/costo quedan pendientes de corpus ejecutable y mediciones; entorno y proveedor ya seleccionados en el diseño técnico. No se requieren pruebas de infraestructura productiva para el alcance actual. Las cinco comparaciones manuales de H3 mantienen su protocolo en [comparación manual/asistida](../../04-evaluacion/comparacion-manual-vs-solucion.md); no se realizan en esta ronda.
 

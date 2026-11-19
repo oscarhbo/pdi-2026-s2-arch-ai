@@ -15,7 +15,7 @@
 
 Desde el 17/11/2026 la arquitectura se mantiene en `02-arquitectura/`, con estructura ArchFlow 0.2.0 y perfil Estándar. La copia elaborada en el repositorio ArchFlow es antecedente; no mantener dos fuentes editables ni volver a importar encima de observaciones posteriores.
 
-Leer primero [ficha](02-arquitectura/README.md), [propuesta para revisión](02-arquitectura/docs/revision-propuesta.md), [integración](02-arquitectura/integracion-archflow.md) y artefactos afectados. No volver a pedir datos de negocio ya documentados.
+Leer primero [ficha](02-arquitectura/README.md), [propuesta para revisión](02-arquitectura/docs/revision-propuesta.md), [registro de transferencia](02-arquitectura/docs/validation-log.md#procedencia-transferencia) y artefactos afectados. No volver a pedir datos de negocio ya documentados.
 
 | Contenido | Fuente canónica |
 |---|---|
@@ -27,6 +27,7 @@ Leer primero [ficha](02-arquitectura/README.md), [propuesta para revisión](02-a
 | Ejecuciones, revisión documental y aprobaciones | `02-arquitectura/docs/validation-log.md` |
 | Decisiones y alternativas | `02-arquitectura/adr/ADR-NNNN-*.md` |
 | Vistas editables e identidad de elementos | `02-arquitectura/diagrams/README.md` |
+| Procedencia e inspección previa del parser | `00-pdi/fuentes/arquitectura/`; manifiestos e informe de referencia |
 | Evidencia de ejecución futura de H2/H3 | `04-evaluacion/resultados/` y comparaciones; enlazar desde el log canónico |
 
 - No repartir el SAD o el plan de validación nuevamente entre los nombres anteriores del PDI. Los borradores sustituidos se eliminan después de trasladar su contenido útil y corregir referencias; no conservar índices duplicados solo como antecedentes. `decisiones/` conserva los ADR originales y H1-04 porque aportan evidencia propia. No crear nuevos ADR en esa ubicación. La única carpeta de diagramas es `02-arquitectura/diagrams/`, conforme a ArchFlow; no recrear `diagramas/`.

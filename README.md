@@ -27,7 +27,7 @@ Leer [instrucciones](AGENTS.md), [objetivos](00-pdi/Objetivos_PDI_2026.md), [est
 
 ## Organización de arquitectura
 
-Adopto la estructura documental de ArchFlow dentro de [02-arquitectura](02-arquitectura/README.md). El [registro de integración](02-arquitectura/integracion-archflow.md) identifica la entrega fuente, sus hashes, destinos e historial conservado. El caso de negocio, objetivos, aprendizaje y presentación mantienen sus ubicaciones; no son copias del SAD.
+Adopto la estructura documental de ArchFlow dentro de [02-arquitectura](02-arquitectura/README.md). El [registro de integración](02-arquitectura/docs/validation-log.md#procedencia-transferencia) identifica la entrega fuente, sus hashes, destinos e historial conservado. El caso de negocio, objetivos, aprendizaje y presentación mantienen sus ubicaciones; no son copias del SAD.
 
 ## Accesos de consulta
 

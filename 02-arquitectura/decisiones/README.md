@@ -7,4 +7,4 @@ Conservo aquí los registros originales del PDI con sus IDs y estados. Las nueva
 - [ADR-003: alcance del caso](ADR-003-alcance-funcional-del-caso.md): alcance aceptado al 15/11/2026; su web opcional se amplía por SRC-019 y la propuesta ADR-0005, sin reescribir la aceptación original.
 - [Revisión simulada de H1-04](revision-simulada-hito-1.md): registro original y cierre v1.0 conservados; no es revisión real de cliente.
 
-La equivalencia de registros, la procedencia y las reglas de evolución están en [integración](../integracion-archflow.md). ADR-001 y ADR-0001 son registros distintos; no se renumeran ni fusionan.
+La equivalencia de registros, la procedencia y las reglas de evolución están en [integración](../docs/validation-log.md#procedencia-transferencia). ADR-001 y ADR-0001 son registros distintos; no se renumeran ni fusionan.

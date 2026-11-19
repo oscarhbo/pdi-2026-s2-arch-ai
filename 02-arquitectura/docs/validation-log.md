@@ -7,7 +7,7 @@ Mantengo separados los resultados, la revisión documental y las aprobaciones. A
 
 ## Ejecuciones
 
-Las validaciones funcionales VAL-001 a VAL-007 de [validation.md](validation.md) están planificadas para H2 y no ejecutadas. La revisión textual VAL-008 de la propuesta actual se registra por separado al final. No se crearon todavía el corpus sintético ni la implementación del prototipo. Las comprobaciones aisladas anteriores del extractor se conservan en el [informe de inspección](../revision-parser-y-dags.md#comprobaciones-realizadas-y-límites); no equivalen a ejecutar las nuevas definiciones ni a resultados de H2.
+Las validaciones funcionales VAL-001 a VAL-007 de [validation.md](validation.md) están planificadas para H2 y no ejecutadas. La revisión textual VAL-008 de la propuesta actual se registra por separado al final. No se crearon todavía el corpus sintético ni la implementación del prototipo. Las comprobaciones aisladas anteriores del extractor se conservan en el [informe de inspección](../../00-pdi/fuentes/arquitectura/revision-parser-y-dags.md#comprobaciones-realizadas-y-límites); no equivalen a ejecutar las nuevas definiciones ni a resultados de H2.
 
 ## Revisiones e impacto
 
@@ -25,7 +25,7 @@ Avance de diseño del 16/11/2026: ventanas y ejecución local/manual confirmadas
 
 Comprobación posterior a este avance: mismo comando documental, salida 0, 0 errores y 1 advertencia PENDING en README. Comprobación adicional del esperado documental: 16 filas base de relación de valor, sin duplicados. La disminución de advertencias no cierra brechas semánticas ni aprueba el diseño; los resultados anteriores se conservan como historial.
 
-El [informe](../revision-parser-y-dags.md#hallazgos-del-analizador) conserva evidencia y localizadores de los defectos observados del extractor previo; no se declaran corregidos. Deben convertirse en casos sintéticos y decisiones de adaptación antes de usar sus salidas como catálogo. Responsable de seguimiento: Óscar; fecha de resolución pendiente de planificación H1-03.
+El [informe](../../00-pdi/fuentes/arquitectura/revision-parser-y-dags.md#hallazgos-del-analizador) conserva evidencia y localizadores de los defectos observados del extractor previo; no se declaran corregidos. Deben convertirse en casos sintéticos y decisiones de adaptación antes de usar sus salidas como catálogo. Responsable de seguimiento: Óscar; fecha de resolución pendiente de planificación H1-03.
 
 Brechas del diseño: publicabilidad de cada diagnóstico, matriz de patrones, esquema destino sintético, almacenamiento, empaquetado, proveedor IA y límites de operación. El SAD mantiene estas propuestas abiertas. No hay excepciones ni riesgos aceptados por esta elaboración.
 
@@ -90,4 +90,68 @@ Verificación editorial: la búsqueda de referencias a autoría del agente y dec
 
 ## Integración en el PDI — 17/11/2026
 
-La propuesta 1.0 se incorpora a `02-arquitectura/` con estructura ArchFlow por SRC-021. Se conserva el historial de las revisiones anteriores: las rutas y comandos relativos a `projects/linaje-impacto-ia-pdi/` en esas entradas describen su ejecución original en ArchFlow, no una ejecución en el PDI. La nueva ubicación es canónica y las siguientes observaciones se registran aquí. La integración no ejecuta pruebas del producto ni acepta decisiones. El [registro de integración](../integracion-archflow.md) mantiene huellas, equivalencias y verificaciones de transferencia.
+La propuesta 1.0 se incorpora a `02-arquitectura/` con estructura ArchFlow por SRC-021. Se conserva el historial de las revisiones anteriores: las rutas y comandos relativos a `projects/linaje-impacto-ia-pdi/` en esas entradas describen su ejecución original en ArchFlow, no una ejecución en el PDI. La nueva ubicación es canónica y las siguientes observaciones se registran aquí. La integración no ejecuta pruebas del producto ni acepta decisiones. El [registro de integración](validation-log.md#procedencia-transferencia) mantiene huellas, equivalencias y verificaciones de transferencia.
+
+
+<a id="procedencia-transferencia"></a>
+## Procedencia y verificaciones de la transferencia
+
+Consolidación editorial: 18/11/2026. Los resultados siguientes corresponden a la integración y depuración del 17/11/2026; no son comprobaciones nuevas. Las reglas vigentes están en [AGENTS.md](../../AGENTS.md) y las fuentes en la [ficha](../README.md). El insumo de inicio ya fue consumido; el contexto vigente se mantiene en la ficha y los documentos del caso de negocio.
+
+Verificación de la limpieza del 18/11/2026: sin referencias restantes a los dos documentos retirados en los archivos de texto revisados y sin nuevos destinos o anclas faltantes. Se conservan los cuatro enlaces históricos a dos fuentes ausentes ya registrados. Las 16 filas de compromisos permanecen idénticas. Los manifiestos JSON son válidos y conservan sus 17 registros de entrega y 37 registros de fuentes; ambos manifiestos y el informe de inspección mantienen su contenido íntegro. El comprobador Python no pudo iniciarse por denegación de ejecución del entorno (EPERM); se realizó una comprobación alternativa de enlaces, anclas, referencias e integridad mediante lectura de archivos. No equivale a ejecutar el comprobador ArchFlow completo ni a validar el producto.
+
+### Procedencia y revisiones
+
+Fuente: `C:/Oscar/Repositorios/ArchFlow/projects/linaje-impacto-ia-pdi`, propuesta 1.0 revisada editorialmente el 17/11/2026. Incluye SAD 1.0, diseño técnico 1.2, experiencia web 1.1 y vistas 1.2. Sin commit nuevo; no se presupone una revisión Git cerrada. [Manifiesto de entrega](../../00-pdi/fuentes/arquitectura/entrega-archflow.json) registra las 17 rutas y SHA-256 de los bytes fuente anteriores a su marca de transferencia.
+
+La copia preserva los IDs y contenido técnico; adapta la ficha para referenciar este repositorio como ubicación canónica y añade procedencia al log/propuesta. Los resultados históricos con comandos de ArchFlow conservan su fecha y contexto; no se presentan como pruebas nuevas realizadas en el PDI.
+
+
+### Fuentes de verdad y equivalencias
+
+| Contenido anterior | Fuente vigente / tratamiento |
+|---|---|
+| arquitectura-de-solucion.md (retirado) | [docs/sad.md](sad.md); diseño consolidado |
+| alternativas.md (retirado) | [adr/README.md](../adr/README.md); alternativas dentro de cada decisión |
+| riesgos-y-limitaciones.md (retirado) | [SAD, sección 11](sad.md#11-riesgos-y-deuda-técnica) |
+| diagramas/README.md (retirado) | [diagrams/README.md](../diagrams/README.md); única carpeta de vistas |
+| decisiones/ADR-001 | Registro original de prioridad, distinto de ADR-0001 |
+| decisiones/ADR-002 | Aplicaciones de lecturas, distinto de ADR-0002 |
+| decisiones/ADR-003 | Alcance original aceptado; web obligatoria posterior en SRC-019 y ADR-0005 propuesto |
+| decisiones/revision-simulada-hito-1.md | Se conserva íntegra como evidencia de H1-04 |
+| 04-evaluacion/plan-de-evaluacion.md (retirado) | [validation.md](validation.md); criterios útiles consolidados en el plan |
+| 04-evaluacion/casos-de-prueba.md (retirado) | [Diez cambios](validation.md#diez-cambios-de-impacto-seleccionados) y [recorrido](recorrido-sintetico.md) |
+| RF-01 a RF-05 y CA-01 a CA-06 del caso | Fuentes de negocio; correspondencia en [requirements.md](requirements.md), sin renumerar |
+| FR/NFR/QS/VAL, EL/VIEW y SRC de ArchFlow | Se conservan con sus definiciones y referencias dentro de la arquitectura |
+| Resultados funcionales futuros | Archivos de evidencia en 04-evaluacion/resultados; registro/enlaces en validation-log.md |
+
+La coexistencia de ADR-001 y ADR-0001 no es duplicación: representan decisiones diferentes. Nuevas decisiones usan cuatro dígitos y siguiente número libre en adr/. Ningún ADR original cambia de estado por migración. Conservo registros con evidencia propia, como los ADR originales, la revisión simulada . Retiro los borradores sustituidos tras consolidar el contenido útil y ajustar enlaces; no mantengo copias paralelas del diseño.
+
+
+### Verificación de transferencia
+
+Antes de integrar se inventariaron las fuentes, los cambios locales y las huellas del PDI. Ya existían cuatro enlaces rotos a dos archivos históricos ausentes: revision-excel-2026-10-28.md y contexto-transferido-2026-10-28.md en 00-pdi/fuentes. No se reconstruye su evidencia ni se reescriben ADR aceptados para ocultarlos.
+
+Verificación posterior realizada el 17/11/2026:
+
+- Comprobador ArchFlow sobre la raíz completa del PDI: 4 errores LINK_MISSING, los mismos cuatro hallazgos previos, y 1 advertencia PENDING en la ficha por pendientes explícitos. No aparecen errores nuevos de estructura, IDs, estados, cobertura o enlaces creados. El resultado global no es una validación limpia porque las fuentes históricas siguen ausentes.
+- Inventario de integridad: 55 archivos preexistentes contrastados por SHA-256; ningún archivo eliminado y ninguna modificación fuera de los 13 documentos previstos. Objetivos, Excel, ADR originales y revisión simulada conservan sus bytes.
+- Seguimiento: las 16 filas conservan IDs, hitos, entregables, fechas originales/revisadas y estados. Solo se actualizan procedencia, evidencia y observaciones de integración.
+- Transferencia: 14 de los 17 documentos fuente mantienen contenido idéntico tras normalizar finales de línea. Ficha, guía de revisión y log solo adaptan ubicación canónica, navegación y registro de transferencia. El manifiesto conserva hashes de bytes originales.
+- La copia de origen en ArchFlow recibe únicamente un aviso de transferencia en su ficha. No se mantiene allí una segunda arquitectura activa.
+
+Comando de referencia desde el PDI: `python -B C:/Oscar/Repositorios/ArchFlow/scripts/check_docs.py .`. Validar el repositorio completo permite revisar enlaces entre secciones; comprobar solo 02-arquitectura/ advertiría de enlaces legítimos fuera de esa subcarpeta. El comprobador no verifica renderizado Mermaid, resultados del producto ni aceptación de decisiones.
+
+
+### Consolidación de diagramas — 17/11/2026
+
+En la integración inicial conservé `diagramas/` como antecedente y añadí `diagrams/` con las vistas de ArchFlow. Esto dejó dos carpetas para el mismo propósito. La carpeta anterior solo contenía un README de planificación, sin diagramas ni fuentes editables.
+
+Retiro ese índice y su carpeta vacía. Mantengo las cuatro vistas existentes en [diagrams/README.md](../diagrams/README.md), sin modificar su contenido. Actualizo el destino en el contexto de transferencia y fijo en AGENTS.md una única carpeta, `02-arquitectura/diagrams/`. Las menciones a la ruta retirada en este registro documentan la corrección, no indican un destino de trabajo. La comprobación de integridad anterior corresponde a la transferencia inicial; esta corrección elimina únicamente el índice obsoleto.
+
+
+### Depuración de documentos sustituidos — 17/11/2026
+
+Retiro los tres borradores anteriores de arquitectura y los dos de evaluación indicados en el mapa. El SAD, los ADR y validation.md cubren sus responsabilidades; traslado al plan único los criterios de medición, denominadores, evidencia y control de sesgos que aún eran útiles. Elimino también la sección duplicada «Índice anterior» de decisiones/README.md. Actualizo los enlaces de negocio, aprendizaje, continuidad y fuentes históricas; en la revisión simulada identifico expresamente los enlaces a sucesores para no atribuirle una revisión del diseño actual.
+
+Conservo los ADR originales y la revisión simulada por sus decisiones y evidencias propias; objetivos, caso de negocio y notas por su propósito distinto. Las plantillas de implementación, resultados, aprendizaje y presentación organizan entregables futuros, no duplican el SAD ni acreditan avances. Los hashes de la entrega original conservan su significado histórico y no se recalculan como si correspondieran a esta revisión.
