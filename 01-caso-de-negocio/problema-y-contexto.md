@@ -1,4 +1,4 @@
-# Problema y contexto
+# Problema y contexto — Lean Business Case
 
 Lectura 1 de 5 · [Índice del caso de negocio](README.md)
 
@@ -6,13 +6,17 @@ Lectura 1 de 5 · [Índice del caso de negocio](README.md)
 
 **Estado: Completado para H1-01. Versión 1.0, 15/11/2026.** Caso de negocio con usuarios, problema, valor, alcance funcional y entrega del MVP definidos. Referencia: [PDI vigente](../00-pdi/Objetivos_PDI_2026.md). Los beneficios se comprobarán durante la evaluación; el cierre documental no acredita implementación ni resultados comerciales.
 
+Revisión editorial: **19/11/2026**. Se conserva el cierre y la versión de H1-01; esta revisión mejora la justificación de negocio y distingue su alcance original de la evolución posterior de arquitectura.
+
 ## Resumen del caso de negocio
 
 El proyecto transforma los artefactos de los pipelines en conocimiento trazable sobre sus dependencias. Ingenieros y analistas podrán consultar el origen y los consumidores de tablas y columnas, explorar caminos upstream y downstream y orientar investigaciones o cambios con referencias al código.
 
 La oportunidad es reutilizar el conocimiento obtenido al analizar cada DAG, en vez de reconstruirlo en cada investigación. El valor depende de que ese conocimiento pueda mantenerse vigente y de que la herramienta declare sus límites. Una lista rápida pero incompleta, obsoleta o sin evidencia puede aumentar el riesgo de una decisión equivocada.
 
-La decisión es construir un MVP acotado con artefactos sintéticos y un reporte como entrega suficiente. La interfaz web con visualización y descarga del reporte es una ampliación opcional si hay tiempo, sin condicionar el MVP. La evaluación posterior determinará si merece la pena extender la solución a un piloto.
+La iniciativa del PDI plantea un prototipo acotado con artefactos sintéticos para comprobar si ese conocimiento reutilizable mejora la investigación. En el cierre de H1-01 del 15/11, un reporte era suficiente y la web era opcional. Posteriormente, [SRC-019](../02-arquitectura/README.md#SRC-019) incorporó la web como requisito de la propuesta de arquitectura. Esta evolución debe incluirse en la estimación, sin reescribir el cierre original ni dar por aprobados los ADR. La evaluación posterior determinará si merece la pena extender la solución a un piloto.
+
+La justificación actual es suficiente para desarrollar y revisar el diseño: existe una necesidad concreta, usuarios identificados y una forma acotada de contrastar el valor. Todavía no demuestra rentabilidad ni viabilidad de ejecución en la capacidad disponible. H1-02 ya cuenta con una propuesta en revisión; el siguiente paso es revisar ese diseño y completar la estimación H1-03, no iniciar otro diseño desde cero ni autorizar construcción o gasto mediante este documento.
 
 El documento se complementa con [alcance funcional](alcance-y-exclusiones.md), [beneficios y criterios de decisión](beneficios-y-criterios-de-exito.md), [esfuerzo y costo](costos-y-esfuerzo.md) y [propuesta inicial de piloto](propuesta-de-piloto.md). Cada uno mantiene un contenido distinto para evitar duplicar acuerdos.
 
@@ -23,6 +27,15 @@ En una plataforma con numerosos procesos, nuevas tablas y DAGs se acumulan sin u
 La búsqueda puede ocupar varias horas o una jornada y aun así dejar dependencias sin identificar. Esta es una referencia cualitativa de la experiencia de trabajo, no una medición formal ni un promedio. El resultado depende del acceso a los repositorios, de la destreza para buscar y del conocimiento de las personas. Cuando ese conocimiento está incompleto o desactualizado, aumenta el riesgo de omisiones y conclusiones equivocadas.
 
 El problema crece con la cantidad de procesos y la profundidad de las cadenas. Repetir la búsqueda manual es costoso y difícil de mantener consistente. En el flujo actual no hay una vista de linaje disponible que resuelva esta necesidad; esto no implica que no existan herramientas de linaje en el mercado ni constituye una comparación de productos.
+
+## Objetivos de la iniciativa
+
+1. Hacer visibles las dependencias de tablas y columnas que podrían omitirse al investigar código disperso.
+2. Reducir la reconstrucción repetida de origen y consumidores mediante conocimiento reutilizable y vigente.
+3. Facilitar investigaciones reproducibles sin depender exclusivamente de la memoria individual.
+4. Demostrar en el PDI capacidad de análisis de negocio, diseño y evaluación de una solución de IA, distinguiendo utilidad comprobada de expectativas comerciales.
+
+Los tres primeros objetivos mantienen el orden de valor definido para H1-01. Se contrastarán en H2 con diez cambios y en H3 con cinco comparaciones manuales; esas cantidades son compromisos de evaluación, no metas de ahorro o precisión.
 
 ## Usuarios y situaciones de uso
 
@@ -90,7 +103,7 @@ Si falta el YAML de DAG 2, el resultado debe decir que su impacto por columna es
 
 **B. Consulta de linaje y análisis de impacto:** consultar origen y consumidores sin exigir un cambio como entrada; recorrer relaciones upstream y downstream para orientar investigaciones. Ante un cambio, explicar candidatos afectados, evidencia, límites y verificaciones recomendadas. La cobertura depende de los DAGs y versiones analizados; ausencia de relación registrada no implica ausencia de dependencia.
 
-El linaje de tablas y columnas tiene prioridad 1 desde el primer prototipo. Spark SQL es el dialecto de referencia; versión y patrones soportados pendientes. El PDI vigente dice desarrollar el parser en C11 y revisar el existente en Plan de Carrera C23: definir reutilización, adaptación o reemplazo requiere inspección y una decisión explícita. Ver [alcance vigente](alcance-y-exclusiones.md).
+El linaje de tablas y columnas tiene prioridad 1 desde el primer prototipo. Spark SQL es el dialecto de referencia. El PDI distingue desarrollar el parser en C11 y revisar el existente en Plan de Carrera C23. La inspección previa ya está [documentada](../00-pdi/fuentes/arquitectura/revision-parser-y-dags.md); no equivale a validar el futuro prototipo. La cobertura y la adaptación propuestas se revisan en [arquitectura](../02-arquitectura/docs/revision-propuesta.md), sin convertirlas aquí en decisiones aceptadas. El [alcance funcional](alcance-y-exclusiones.md) conserva la referencia del cierre de H1-01.
 
 ## Aporte esperado de la IA
 
@@ -111,28 +124,36 @@ Comparación conceptual para este caso, sin evaluación de productos comerciales
 
 La opción elegida es el prototipo de descubrimiento incremental con explicación IA. Frente a una búsqueda aislada, permite conservar lo descubierto y consultarlo de nuevo; frente a documentación manual, vincula las relaciones con los artefactos que las sustentan y permite mantener sus versiones. Su ventaja depende de comprobar cobertura, actualización y esfuerzo total. No se descarta integrar herramientas existentes posteriormente, pero su disponibilidad y adecuación no están verificadas.
 
-## Ventajas y consecuencias para una plataforma con muchos procesos
+## Beneficios esperados e indicadores de éxito
 
 El orden de prioridad es: identificar dependencias omitidas, reducir tiempo de investigación y reducir dependencia del conocimiento individual.
 
-| Situación | Consecuencia posible si continúa | Ventaja buscada |
-| --- | --- | --- |
-| Procesos que se crean sin una visión compartida de sus relaciones. | Dependencias ocultas y dificultad para evaluar cambios. | Hacer consultables origen y consumidores dentro de la cobertura disponible. |
-| Cadenas que atraviesan varios DAGs y pasos intermedios. | Búsquedas prolongadas y caminos que quedan sin recorrer. | Seguir relaciones directas y transitivas conservando STG y evidencia. |
-| Una tabla se utiliza sin conocer qué la alimenta. | Investigar en componentes equivocados o no encontrar dónde comenzar. | Localizar productores y caminos upstream como punto de partida. |
-| Un proceso presenta problemas. | Dificultad para identificar consumidores que conviene revisar. | Mostrar caminos downstream, sin afirmar que el fallo se propagó en ejecución. |
-| Conocimiento concentrado en pocas personas. | Esperas, dificultades de incorporación y pérdida de contexto con cambios de equipo. | Conservar conocimiento verificable y reutilizable por ingenieros y analistas. |
-| Documentación manual o memoria desactualizada. | Decisiones apoyadas en relaciones antiguas o incompletas. | Asociar relaciones con versiones y mostrar límites de vigencia. |
-| Una investigación se repite. | Duplicación de búsqueda y coordinación. | Reutilizar el linaje acumulado y enfocar la revisión en lo relevante. |
-| Faltan repositorios o artefactos. | Confundir una vista parcial con ausencia de dependencias. | Señalar referencias no resueltas y qué información falta. |
+Los recorridos de origen y consumidores descritos en las situaciones de uso buscan dar un punto de partida para investigar, compartir contexto y evitar búsquedas repetidas. Su valor depende de conservar la evidencia y declarar cuándo faltan artefactos; no basta con mostrar una cadena de relaciones.
 
 Estas ventajas son expectativas de valor, no ahorros ni incidentes evitados ya demostrados. El reporte no sustituye permisos de acceso ni descubre código que no se le proporciona.
+
+| Valor por contrastar | Indicador y evidencia prevista | Límite de interpretación |
+| --- | --- | --- |
+| Menos dependencias omitidas (B-02). | Relaciones esperadas, omitidas y falsas en los diez cambios, por tabla y columna. | Un corpus sintético no acredita cobertura empresarial. |
+| Menor esfuerzo recurrente (B-01). | Tiempo activo en cinco comparaciones manuales; incorporación, actualización y revisión separados. | Una consulta rápida no demuestra ahorro neto. |
+| Conocimiento vigente (B-03). | Relaciones conservadas, actualizadas o retiradas tras cambios y bajas. | La vigencia depende de los artefactos y versiones proporcionados. |
+| Explicación útil y reproducible (B-04/B-05). | Correspondencia entre afirmaciones y evidencia, claridad e información adicional requerida. | La autoevaluación no equivale a validación independiente de usuarios. |
+
+Las hipótesis B-01 a B-05 y los criterios propuestos CA-01 a CA-06 se mantienen en [beneficios y criterios de éxito](beneficios-y-criterios-de-exito.md). No hay línea base medida ni meta de ahorro aceptada. Se podrá recomendar ampliar, acotar y repetir o no extender todavía según trazabilidad, calidad y esfuerzo total, incluso si los resultados son desfavorables.
+
+## Esfuerzo, costos y viabilidad a alto nivel
+
+El PDI registra 4 h/semana de práctica y 2 h/semana de revisión para el primer objetivo; no confirma una capacidad global para los posteriores. USD 20 es un presupuesto API propuesto, no autorización de consumo ni costo total. No hay estimación cerrada de construcción, tarifa interna ni retorno económico calculado.
+
+El esfuerzo incluye delimitar patrones, adaptar el análisis, incorporar artefactos, mantener relaciones, explicar resultados, evaluar y presentar. La web incorporada después de H1-01 también debe estimarse. La inspección disponible aporta una base para H1-03; falta convertir sus hallazgos en horas por trabajo y contrastarlas con la disponibilidad restante.
+
+La comparación debe incluir preparación inicial, mantenimiento y revisión de resultados, además del tiempo de consulta. El [modelo de costos y esfuerzo](costos-y-esfuerzo.md) conserva el desglose y el ejemplo aritmético, que no es un pronóstico. La viabilidad permanece por confirmar: el ejercicio sintético permite evaluar un subconjunto, pero no garantiza que todo el alcance quepa en el tiempo disponible.
 
 ## Entrega mínima y condiciones de utilidad
 
 El MVP entrega un reporte con el objeto consultado, origen y consumidores de tablas y columnas, caminos entre DAGs y pasos intermedios relevantes. Cada relación permite localizar DAG, archivo, fragmento SQL y versión. Se incluyen artefactos analizados, información incompleta y referencias no resueltas.
 
-La explicación IA complementa ese núcleo con posibles afectaciones y recomendaciones sustentadas. No encontrar una dependencia no equivale a asegurar que un objeto no será afectado fuera de la cobertura analizada. La utilidad mínima es proporcionar un punto de partida trazable para investigar, sin exigir una interfaz web.
+La explicación IA complementa ese núcleo con posibles afectaciones y recomendaciones sustentadas. No encontrar una dependencia no equivale a asegurar que un objeto no será afectado fuera de la cobertura analizada. La utilidad de negocio mínima es proporcionar un punto de partida trazable para investigar. El reporte describe la entrega original de H1-01; el alcance posterior incorpora web obligatoria, como se precisa en el resumen.
 
 ## Supuestos y riesgos del caso
 
@@ -146,9 +167,16 @@ La explicación IA complementa ese núcleo con posibles afectaciones y recomenda
 
 Los riesgos técnicos detallados permanecen en [riesgos y limitaciones](../02-arquitectura/docs/sad.md#11-riesgos-y-deuda-técnica). El riesgo comercial principal es confundir una demostración de relaciones conocidas con una garantía de cobertura empresarial.
 
-## Valor por validar y continuidad
+## Preguntas abiertas y continuidad
 
 Hipótesis: facilitar la investigación, reducir omisiones, mantener documentación trazable y mejorar la planificación de cambios. Mantener los compromisos de diez cambios conocidos y cinco comparaciones manuales sin prometer ahorro ni cobertura universal.
+
+- ¿Qué patrones y esfuerzo caben en la disponibilidad restante, incluida la web? Resolver en H1-03 utilizando la inspección y el diseño propuesto.
+- ¿Cuál es el tiempo y frecuencia reales de investigación y actualización? Medir antes de extrapolar ahorro o retorno comercial.
+- ¿La explicación IA aporta utilidad suficiente frente a revisar el mismo reporte sin ella? Contrastar evidencia, claridad y esfuerzo de revisión.
+- ¿Existen herramientas accesibles que cubran los artefactos del caso? Su disponibilidad e integración no están verificadas; conservar esa alternativa para una eventual extensión.
+
+Los documentos de apoyo fechados el 28/10 y el 15/11 conservan pendientes históricos sobre inspección y web opcional. Para el estado posterior prevalecen la [ficha de arquitectura](../02-arquitectura/README.md) y su [propuesta en revisión](../02-arquitectura/docs/revision-propuesta.md). Esta distinción no acepta sus ADR ni modifica los compromisos originales.
 
 Este escenario reemplaza como hilo principal el borrador del 25/10 sobre ventas.total y vistas diarias/mensuales. El PDI original sigue incluyendo tablas, vistas y scripts; explicitar su correspondencia con el corpus de DAGs sin eliminar vistas silenciosamente.
 

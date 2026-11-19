@@ -1,6 +1,6 @@
 # Estado actual
 
-Última actualización: **18/11/2026**, zona America/Mexico_City. Sesión más reciente: separación de evidencias y documentación principal de arquitectura.
+Última actualización: **19/11/2026**, zona America/Mexico_City. Sesión más reciente: revisión editorial del Lean Business Case, sin cambios de estados ni decisiones.
 
 ## Base vigente para retomar
 
@@ -16,6 +16,8 @@ La [propuesta v1.0](../02-arquitectura/docs/revision-propuesta.md) queda integra
 La [integración](../02-arquitectura/docs/validation-log.md#procedencia-transferencia) registra mapa, procedencia y verificaciones. Las entradas siguientes reflejan las fechas indicadas; sus pendientes y tecnologías no seleccionadas describen el estado anterior, no reemplazan esta base vigente.
 
 ## Avance comprobado
+
+- 19/11/2026: optimizado el [caso de negocio](../01-caso-de-negocio/problema-y-contexto.md) en su ubicación original: objetivos explícitos, indicadores y viabilidad resumidos, menos repetición y distinción entre web opcional al cierre y requisito posterior. H1-01 conserva cierre y versión; beneficios sin medir. Próxima acción: revisar la propuesta de arquitectura y estimar H1-03 con el alcance web. El comprobador ArchFlow no pudo iniciarse (EPERM); no se atribuye validación de ese script ni pruebas del producto.
 
 - 18/11/2026: reubicados los manifiestos de entrega/fuentes y el informe del parser en [fuentes de arquitectura](fuentes/arquitectura/README.md). Se mantienen accesibles para trazabilidad y adaptación futura; ya no ocupan la raíz de arquitectura. Ajustadas referencias y conservados hashes originales, estados y fechas de compromisos. Próxima acción: revisar la propuesta canónica y estimar H1-03.
 

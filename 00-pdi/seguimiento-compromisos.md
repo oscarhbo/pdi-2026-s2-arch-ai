@@ -27,6 +27,8 @@ No hay reprogramaciones aprobadas. Ninguno de los tres hitos profesionales ha ve
 
 ## Registro de cambios
 
+- 19/11/2026, revisión editorial: caso principal reorganizado como Lean Business Case, con objetivos, indicadores, recursos e incertidumbres visibles y evolución del requisito web diferenciada. Se conserva H1-01 Completado, versión 1.0 y fecha original; las 16 filas y los ADR no cambian. Los dos registros de continuidad se actualizan para dejar trazabilidad, sin crear entregables adicionales. Próxima acción: revisión de arquitectura y estimación H1-03; sin implementación ni resultados nuevos.
+
 - 18/11/2026, organización de evidencias: traslado manifiestos e inspección previa a [fuentes de arquitectura](fuentes/arquitectura/README.md), manteniendo una única copia y referencias desde el diseño. Conservo hashes de origen y destinos históricos; el manifiesto distingue la ubicación actual. Sin cambios en entregables, fechas o estados.
 
 - 18/11/2026, depuración de auxiliares: elimino el insumo de arranque consumido y la guía separada de integración. Su información útil queda en la ficha y el log de validación; conservo los manifiestos de transferencia/fuentes y la revisión del parser como evidencia. Ajusto referencias sin modificar las 16 filas de compromisos ni sus fechas y estados.
